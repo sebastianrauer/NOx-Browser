@@ -6,7 +6,12 @@ html {
     line-height: 1.2;
     font-family: 'Palanquin', sans-serif;
 }
-
+.map
+ {
+    width: 100%; 
+    top: 80px; 
+    height:500px;
+}
 ::-moz-selection {
     background: #b3d4fc;
     text-shadow: none;
@@ -58,8 +63,8 @@ textarea {
    ========================================================================== */
 
 body {
-    background-color: #0A1D1F;
-font-size: 1.1em;
+background-color: #121212;
+font-size: 1.2em;
 line-height: 1.6;
 }
 .wrapper {
@@ -87,7 +92,7 @@ line-height: 1.6;
 .header-container,
 .footer-container,
 .main aside {
-    background: #0A1D1F
+    background: #121212
 ;
 }
 
@@ -116,7 +121,7 @@ nav a {
     font-weight: bold;
 
     color: white;
-    background: #0A1D1F;
+    background: #121212;
 }
 
 nav a:hover,

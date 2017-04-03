@@ -11,14 +11,17 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="apple-touch-icon" href="apple-touch-icon.png">
 
+        //CSS
         <link rel="stylesheet" href="css/normalize.min.css">
         <link rel="stylesheet" href="css/main.css">
 
-<link href="https://fonts.googleapis.com/css?family=Martel:600|Palanquin:300" rel="stylesheet">
+        //TYPE GERAFFEL
+        <link href="https://fonts.googleapis.com/css?family=Martel:600|Palanquin:300" rel="stylesheet">
         <script src="js/vendor/modernizr-2.8.3-respond-1.4.2.min.js"></script>
 
+        //MAPBOX GERAFFEL
         <script src='https://api.mapbox.com/mapbox-gl-js/v0.34.0/mapbox-gl.js'></script>
-<link href='https://api.mapbox.com/mapbox-gl-js/v0.34.0/mapbox-gl.css' rel='stylesheet' />
+        <link href='https://api.mapbox.com/mapbox-gl-js/v0.34.0/mapbox-gl.css' rel='stylesheet' />
 
 
     </head>
@@ -34,26 +37,26 @@
                     <ul>
                         <li><a href="#tool">The Tool</a></li>
                         <li><a href="#about">About</a></li>
-                        <li><a href="#">Impressum</a></li>
+                        <li><a href="#impressum">Impressum</a></li>
                     </ul>
                 </nav>
             </header>
         </div>
-        <mapsection>
-                        <div id='map' style='width: 100%; top: 85px; height:500px;'></div>
-                    </mapsection>
+        <mapsection id="tool">
+            <div id='map' style='width: 100%; top: 80px; height:500px;'></div>
+        </mapsection>
 
         <div class="main-container">
             <div class="main wrapper clearfix">
 
                 <article>
-                    <header id="about">
-                        <h1>NO2 Belastung in Deutschland</h1>
+                    <header>
+                        <h1>Another One Bites The Dust</h1>
                         <p>Unter dem Begriff Stickoxide (NOx) versteht man den Zusammenschluss aller Stickoxide, Stickstoffoxide und nitrosen Gase, welche zu Luftverunreinigungen führen können. NOx (Stickstoffdioxid) wird bei der Verbrennung fossiler Energieträger, wie Gas, Kohle und Öl in der Atmosphäre freigesetzt. Mitverantwortlich sind Abgase von Kraftfahrzeugen, von Öl- und Gas-Heizkesseln sowie von Gas- und Kohlekraftwerken. Während die Belastungen ausgehend von PM10 und PM2,5 in Deutschland im Gesamten einen Rückgang verzeichnet, zeigt sich ein negativer Aufwärtstrend in den sogenannten sekundären Feinstaubemissionen.
 </p>
                     </header>
 
-                    <section>
+                    <section id="about">
                         <h1>Geschichte und aktuelle Forschungen</h1>
                         <p>Gegenüber den 1990er Jahren konnte die Feinstaubbelastung in Deutschland erheblich reduziert werden. Aktuelle Messungen der letzten Jahre zeigen jedoch eine Verlangsamung dieser positiven Entwicklung. In Hinblick auf die Entwicklung der Luftverunreinigungen in Deutschland verlagert sich der Fokus mittlerweile auch auf die Belastung der Atemluft mit Stickoxide, Stickstoffoxide und nitrose Gase. Hierbei handelt es sich um den sogenannten sekundären Feinstaub.</p>
                     </section>
@@ -61,7 +64,7 @@
                         <h3>article footer h3</h3>
                         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam sodales urna non odio egestas tempor. Nunc vel vehicula ante. Etiam bibendum iaculis libero, eget molestie nisl pharetra in. In semper consequat est, eu porta velit mollis nec. Curabitur posuere enim eget turpis feugiat tempor.</p>
                     </footer>
-                    <header id="about">
+                    <header id="impressum">
                         <h1>article header h1</h1>
                         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam sodales urna non odio egestas tempor. Nunc vel vehicula ante. Etiam bibendum iaculis libero, eget molestie nisl pharetra in. In semper consequat est, eu porta velit mollis nec.</p>
                     </header>
@@ -77,7 +80,7 @@
 
         <div class="footer-container">
             <footer class="wrapper">
-                <p>® Sebastian Rauer 2017</p>
+                <p>Copyright: Sebastian Rauer 2017</p>
             </footer>
         </div>
 
@@ -86,13 +89,13 @@
 
         <script src="js/main.js"></script>
 
-<script>
-mapboxgl.accessToken = 'pk.eyJ1IjoicmF1ZXJzZWJhc3RpYW4iLCJhIjoiY2owOXRyemQ0MGFxYTJ3bnlidm11OGsxaiJ9.x5S9zEf7rbi9c_it9cECCw';
-var map = new mapboxgl.Map({
-    container: 'map',
-    style: 'mapbox://styles/rauersebastian/cj123e8qw007g2ro9dmuipdcs'
-});
-</script>
+        <script>
+            mapboxgl.accessToken = 'pk.eyJ1IjoicmF1ZXJzZWJhc3RpYW4iLCJhIjoiY2owOXRyemQ0MGFxYTJ3bnlidm11OGsxaiJ9.x5S9zEf7rbi9c_it9cECCw';
+            var map = new mapboxgl.Map({
+                container: 'map',
+                style: 'mapbox://styles/rauersebastian/cj123e8qw007g2ro9dmuipdcs'
+            });
+        </script>
         <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
         <script>
             (function(b,o,i,l,e,r){b.GoogleAnalyticsObject=l;b[l]||(b[l]=
