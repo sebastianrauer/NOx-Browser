@@ -1,0 +1,206 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:v="urn:schemas-microsoft-com:vml">
+<head>
+  <meta http-equiv="content-type" content="text/html; charset=UTF-8"/>
+  <title>TSB Geocoder</title>
+
+<style type="text/css">
+body{font-family: Arial; font-size: small; color: #1E3791; background-color: white;}
+#outline {margin:20px; float:left; -moz-outline-radius:20px;  -moz-outline-style:solid;
+   -moz-outline-color:#E60032; -moz-outline-width:10px;}
+#map{width:512px; height:440px; float:left;}
+#head{text-align:left; margin-left:20px; font-size:150%;}
+#img{margin: 20px}
+#novel{width:400px; margin:20px;float:right;}
+#scale{width:300px; border: 1px solid blue; visibility:hidden}
+#bar{background-color:blue; height:4px; width:0px;}
+a:hover {color: #E60032; text-decoration: underline overline;}
+td{vertical-align:top;}
+code{font-size:13px}
+.pushpin{width:20px; height:34px; border:none;}
+.small{color:#E60032; font-size:80%;}
+.geocode {}
+</style>
+
+  <script src="http://maps.google.com/maps?file=api&v=2&key=ABQIAAAAYxpy0HiKBWXiyhVrpVqkshTzRM_GTxWOqTaXXRScn8KwUCiJWhT96ZS2MOLTq-SEmmJL1_cNrib9tA" type="text/javascript">
+  </script>
+
+</head>
+<body onunload="GUnload()" >
+
+<table>
+  <tr>
+    <td>
+      <h3 id="head"> Geodatenkonvertierer</h3> 
+          </td>
+    <tr>
+		<img src="https://www.berlin.de/binaries/asset/image_assets/3928275/ratio_4_3/1444305781/170x130/">
+
+    </tr>
+  </tr>
+  <tr>
+    <td>
+      <div id="outline">
+        <div id="map">
+          <noscript>Bitte JavaScript aktivieren</noscript>
+        </div>
+      </div>
+    </td>
+    <td rowspan="2">
+      <div id="novel">
+        
+        <div id="scale"><div id="bar"></div></div>
+        Adresse(n) eingeben:<form class ="geocode" action="#" onsubmit="geo(this.haku.value, this.ext.value); return false">
+          <textarea cols="40" rows="10" wrap="off" id="haku" name="haku" title="200+ lines not recommended at a time"></textarea>
+          <input type="submit" id="hae" value="  Kodieren  " title="Run"/>
+          mit
+          <input type="text" id="ext" title="Extension added to each query"/>
+          als Ergänzung
+        </form>
+        Errors:
+        <div>
+        <textarea id="errors"
+cols="40" rows="5" wrap="off" title="Fehlerbericht"></textarea><br/>
+        <input type="button" id="stop" value="Stop" title="Emergency stop" onclick="len=0"/>
+        <input type="button" id="clr-in" value="Clr output" title="Clear map and output fields" onclick="clearOutput()"/>
+        <input type="button" id="clr-out" value="Clr input" title="Clear input field" onclick="clearInput()"/>
+        </div>
+        <p>Als Ergänzung kann ein Land, eine Stadt o.ä. angegeben werden, die für alle Adressen gleich ist.
+       </p>
+        <p>Ausgabeformat: <code> lng, lat, Addresse</code> 
+
+        <p><span id="api-version"></span></p>
+        <p>Codebase von <a href="http://koti.mbnet.fi/ojalesa/exam/index.html">Esa</a></p> 
+      </div>
+    </td>
+  </tr>
+ </table>
+<textarea id="memo"
+cols="60" rows="30" wrap="off" title="Copy and edit your material here."></textarea>
+
+
+<script type="text/javascript">
+
+/**
+ * 'Map coming...' visible only with JavaScript on.
+ */
+document.getElementById("map").innerHTML = "Map coming...";
+document.getElementById("api-version").innerHTML = "api v=2."+G_API_VERSION;
+if (!GBrowserIsCompatible()) {
+  alert('Sorry. Your browser is not Google Maps compatible.');
+}
+
+/**
+ * map
+ */
+_mPreferMetric = true;
+var map = new GMap2(document.getElementById("map"));
+map.setCenter(new GLatLng(0,0), 1);
+map.addControl(new GLargeMapControl());
+map.addControl(new GMapTypeControl(1));
+map.addControl(new GScaleControl());
+map.openInfoWindowHtml(map.getCenter(), "Nice to see you.");
+map.closeInfoWindow(); //preload iw
+
+
+/**
+ * Geocoder
+ */
+var points = [];
+var bounds = new GLatLngBounds();
+var geocoder = new GClientGeocoder();
+var lines;
+var lineNumber;
+var len = 0;
+var bar = document.getElementById("bar");
+var scale = document.getElementById("scale");
+function geo(addresses,ext){
+  scale.style.visibility = "visible";
+  var start = new Date().getTime();
+  lines = addresses.split("\n");
+  len = lines.length;
+  lineNumber=0;
+  function doIt(){
+    var query = lines[lineNumber];
+    if(ext)query += ", " + ext;
+    geocoder.getLatLng(query,function(point){
+      if(!point){
+        lineNumber++;
+        report(query, lineNumber);
+        if(lineNumber<len){doIt()};
+      }else{
+        var marker = new GMarker(point);
+        map.addOverlay(marker);
+        bounds.extend(point);
+        point.address = query;
+        points.push(point);//to be used
+        memo(point); // intentionally slow function
+        lineNumber++;
+        marker.bindInfoWindowHtml(lineNumber + "<br/>" + query);
+        if(lineNumber<len){doIt()};
+        map.fit(bounds);
+        bar.style.width = parseInt(300*lineNumber/len)+"px";
+      }
+      if(lineNumber>=len){
+        var time = ((new Date().getTime() - start)/1000).toFixed(0);
+        alert(lineNumber+" Adressen\n"+time+"Sekunde(n)")
+      };
+    });
+  }
+  doIt();
+}
+
+
+
+/**
+ * Dom functions for output fields
+ */
+var printOut = document.getElementById("memo");
+printOut.value = "";
+function memo(pnt){
+  var row = pnt.lng().toFixed(5);
+  row += ", ";
+  row += pnt.lat().toFixed(5);
+  /**row += ", ";
+  *row += pnt.address;
+  */
+  row += "\n";
+  printOut.value += row;
+}
+
+var errorReport = document.getElementById("errors");
+errorReport.value = "";
+function report(query_, n_){
+  var row ="#"+n_;
+  row += " not found: ";
+  row += query_;
+  row += "\n";
+  errorReport.value += row;
+}
+
+function clearInput(){
+  document.getElementById("haku").value="";
+  scale.style.visibility = "hidden";
+  bar.style.width = "0px";
+}
+
+function clearOutput(){
+  map.clearOverlays();
+  bounds = new GLatLngBounds();
+  printOut.value="";
+  errorReport.value="";
+  scale.style.visibility = "hidden";
+  bar.style.width = "0px";
+}
+
+/**
+ * zoom and pan to fit in view
+ */
+GMap2.prototype.fit = function(bounds){
+  this.setCenter(bounds.getCenter(), this.getBoundsZoomLevel(bounds));
+}
+
+
+</script>
+</body>
+</html>
