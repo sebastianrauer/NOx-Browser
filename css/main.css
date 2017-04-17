@@ -148,12 +148,6 @@ mapsection
 }
 
 .main article h1 {
-  color: white;
-font-family: 'Martel';
-    font-size: 2.2em;
-    line-height: 1.3em;
-}
-.h1treemap {
     color: white;
     font-family: 'Martel';
     font-size: 2.2em;
@@ -161,6 +155,11 @@ font-family: 'Martel';
 }
 
 .main aside {
+  font-family: 'Palanquin', sans-serif;
+    color: white;
+    padding: 0px 5% 10px;
+}
+.main aside2 {
   font-family: 'Palanquin', sans-serif;
     color: white;
     padding: 0px 5% 10px;
@@ -185,22 +184,33 @@ font-family: 'Martel';
    ========================================================================== */
 
 
+a.extern {
+    transition-duration: 0.5s;
+    text-decoration:none;
+    color: white;
+        background-size: 10px 10px;
 
+    padding-right: 5px;
 
+}
 
-
-
-
-
-
-
-
-
-
+a.extern:hover {
+    text-decoration:bold;
+    color: white;
+    background-color: white;
+    background: url(chain.svg) no-repeat top right;
+    background-size: 10px 10px;
+    padding-right: 5px;
+}
 
 /* ==========================================================================
-   Media Queries
-   ========================================================================== */
+ .chain {
+  color: white;
+  text-decoration-line: none;
+  background: url(chain.svg);
+  background-size: 10px 10px;
+  background-repeat: no-repeat;
+}  ========================================================================== */
 
 @media only screen and (min-width: 480px) {
 
@@ -280,6 +290,13 @@ font-family: 'Martel';
             border-left: white 1px;
             border-left-style: solid;
 
+    }
+    .main aside2 {
+        float: right;
+        width: 28%;
+        margin-top: 90px;
+        border-left: white 1px;
+        border-left-style: solid;
     }
 }
 
