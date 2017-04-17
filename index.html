@@ -1,34 +1,31 @@
 <!doctype html>
-<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7" lang=""> <![endif]-->
-<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8" lang=""> <![endif]-->
-<!--[if IE 8]>         <html class="no-js lt-ie9" lang=""> <![endif]-->
-<!--[if gt IE 8]><!--> <html class="no-js" lang=""> <!--<![endif]-->
+<html class="no-js" lang="">
     <head>
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-        <title></title>
+        <title>NOx Browser</title>
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="apple-touch-icon" href="apple-touch-icon.png">
 
-        //CSS
+        <!-- //CSS -->
         <link rel="stylesheet" href="css/normalize.min.css">
         <link rel="stylesheet" href="css/main.css">
 
-        //TYPE GERAFFEL
+        <!-- //TYPE GERAFFEL -->
         <link href="https://fonts.googleapis.com/css?family=Martel:600|Palanquin:300" rel="stylesheet">
         <script src="js/vendor/modernizr-2.8.3-respond-1.4.2.min.js"></script>
 
-        //MAPBOX GERAFFEL
+        <!-- //MAPBOX GERAFFEL -->
         <script src='https://api.mapbox.com/mapbox-gl-js/v0.34.0/mapbox-gl.js'></script>
         <link href='https://api.mapbox.com/mapbox-gl-js/v0.34.0/mapbox-gl.css' rel='stylesheet' />
 
-        //CHARTS GERAFFEL
+        <!-- //CHARTS GERAFFEL -->
         <script src="https://code.highcharts.com/highcharts.js"></script>
         <script src="https://code.highcharts.com/modules/treemap.js"></script>
 
-
     </head>
+   
     <body>
         <div class="header-container">
             <header class="wrapper clearfix">
@@ -55,7 +52,11 @@
                         <p>Entgegen der rückläufigen Belastung der Atemluft mit Feinstaubpartikeln in Deutschland zeigen Daten, dass der sogenannte sekundäre Feinstaub eine negative Entwicklung der letzten Jahre aufweist. Die durch den sekundären Feinstaub entstehenden Emissionen sind eine große Herausforderung für die Gesundheit von Menschen und Umwelt.<br><br> Unter dem Sammelbegriff Stickoxide (NOx) verbergen sich die für den sekundären Feinstaub verantwortlichen gasförmigen Schadstoffe wie Ammoniak, Schwefeldioxid und Stickstoffoxiden. <a class="extern" href="#">Aktuelle Forschungen</a> ergeben, dass die gesundheitliche Belastung in Städten durch Feinstaubemissionen besonders hoch ist. Bei einer Belastung über einen längeren Zeitraum ergeben sich ernsthafte Schäden an Lunge und Herz.
                         </p>
                     </header>
-
+                    </div>
+            <section id="image">
+                <div class="peking"></div>
+            </section>
+                <div class="main wrapper clearfix">
                     <section id="about">
                         <h1>Visuelle Exploration</h1>
                         <p>In vielen städtebaulichen Prozessen sind Informationen über Gesundheitsgefahren für Umwelt und Bewohner immens wichtig. Durch die visuelle Aufbereitung der Daten werden eventuelle Kommunikationslücken geschlossen und Diskussionen eröffnet. Zusätzlich ermöglicht diese Arbeit es eine bessere Zugänglichkeit dieser Informationen durch Visualisierungen zu gewährleisten und ein breiteres Publikum zu erreichen umso entsprechend einen größeren Aktionsradius zu aktivieren.<br><br>In vielen städtebaulichen Prozessen sind Informationen über Gesundheitsgefahren für Umwelt und Bewohner immens wichtig. Durch die visuelle Aufbereitung der Daten werden eventuelle Kommunikationslücken geschlossen und Diskussionen eröffnet. Zusätzlich ermöglicht diese Arbeit es eine bessere Zugänglichkeit dieser Informationen durch Visualisierungen zu gewährleisten und ein breiteres Publikum zu erreichen umso entsprechend einen größeren Aktionsradius zu aktivieren.</p>
@@ -77,15 +78,15 @@
              <!-- #main-container -->
             </div> <!-- #main -->
         
-<div id="MessstationenTreemap" style="stroke-width:0px; stroke:#000000; width: 100%; height: 600px; margin: 0 auto"></div>
+<div id="MessstationenTreemap" style="stroke-width:0px; background-color: black; stroke:#000000; width: 100%; height: 400px; margin: 0 auto"></div>
 
 
     <div class="main-container">
         <div class="main wrapper clearfix">
             <article>
                 <header id="morestuff">
-                    <h1>"black, brown, red, poor, and poisoned"</h1>
-                    <p>Mit einem kritischen Blick auf die Entwicklung von Großstädten außerhalb Europas werden immense Herausforderungen deutlich. Ein kürzlich veröffentlichter Artikel gibt einen Überblick über die Lage der Luftverunreinigungen in Städten wie zum Beispiel: Peking, Teheran und Delhi. Die Herausforderungen sind in vielen Städten ähnlich: durch die rapide Urbanisierung, das schnelle Anwachsen von Industrie und der Vervielfältigung des Verkehrsaufkommens auf den Straßen, ist es schwierig die Grenzwerte für Überschreitungen von Fein- und Feinsstaub in den Griff zu bekommen. Es sind in der Regel Städte in den sogenannten Schwellenländern die unter massiven Luftverunreinigungen leiden.</p>
+                    <h1>Umweltgerechtigkeit?</h1>
+                    <p>Mit einem kritischen Blick auf die Entwicklung von Großstädten außerhalb Europas werden immense Herausforderungen deutlich. Ein kürzlich veröffentlichter Artikel gibt einen Überblick über die Lage der Luftverunreinigungen in Städten wie zum Beispiel: Peking, Teheran und Delhi.<br><br> Die Herausforderungen sind in vielen Städten ähnlich: durch die rapide Urbanisierung, das schnelle Anwachsen von Industrie und der Vervielfältigung des Verkehrsaufkommens auf den Straßen, ist es schwierig die Grenzwerte für Überschreitungen von Fein- und Feinsstaub in den Griff zu bekommen. Es sind in der Regel Städte in den sogenannten Schwellenländern die unter massiven Luftverunreinigungen leiden.</p>
                 </header>
             </article>
             <aside2>
@@ -106,7 +107,7 @@
 
         <script src="js/main.js"></script>
 
-        //MAPBOX
+        <!-- MAPBOX -->
         <script>
             mapboxgl.accessToken = 'pk.eyJ1IjoicmF1ZXJzZWJhc3RpYW4iLCJhIjoiY2owOXRyemQ0MGFxYTJ3bnlidm11OGsxaiJ9.x5S9zEf7rbi9c_it9cECCw';
             var map = new mapboxgl.Map({
@@ -116,7 +117,7 @@
         </script>
         <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
         
-        GOOGLE ANALYTICS
+        <!-- ANALYTICS -->
         <script>
             (function(b,o,i,l,e,r){b.GoogleAnalyticsObject=l;b[l]||(b[l]=
             function(){(b[l].q=b[l].q||[]).push(arguments)});b[l].l=+new Date;
@@ -126,27 +127,33 @@
             ga('create','UA-XXXXX-X','auto');ga('send','pageview');
         </script>
         
-        //HIGHCHART
+        <!-- HIGHCHARTS -->
         <script type="text/javascript">
             Highcharts.chart('MessstationenTreemap', {
+            chart:{
+                borderColor: '#121212',
+                borderWidth: 20
+            },
             series: [{
             allowDrillToNode: true,
             type: "treemap",
+            backgroundColor: '#000',
             layoutAlgorithm: 'stripes',
             alternateStartingDirection: true,
             levels: [{
                 borderColor: "white",
-                borderWidth: 5,
+                borderWidth: 1,
                 level: 1,
                 layoutAlgorithm: 'stripes',
                 dataLabels: {
-                  borderColor: "black",
                   shadow: 'false',
                     enabled: true,
                     align: 'left',
-                    color: 'grey',
+                    color: 'white',
+                    left:'20px',
                     verticalAlign: 'top',
                     style: {
+                        fontFamily: 'Palanquin',
                         fontSize: '22px',
                         textOutline: false,              
                         fontWeight: 'normal'

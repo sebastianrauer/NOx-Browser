@@ -12,6 +12,15 @@ html {
     top: 80px; 
     height:500px;
 }
+.peking
+{
+    width: 100%;
+    height: 400px;
+    background-image: url("/img/peking.png");
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: contain;
+}
 ::-moz-selection {
     background: #b3d4fc;
     text-shadow: none;
@@ -155,14 +164,23 @@ mapsection
 }
 
 .main aside {
+    background-color: #1B1B1B;
   font-family: 'Palanquin', sans-serif;
+  font-size: 0.9em;
+  line-height: 1.2em;
     color: white;
     padding: 0px 5% 10px;
 }
 .main aside2 {
+        background-color: #1B1B1B;
   font-family: 'Palanquin', sans-serif;
+    font-size: 0.9em;
+  line-height: 1.2em;
     color: white;
     padding: 0px 5% 10px;
+}
+.MessstationenTreemap{
+    background-color: black;
 }
 
 .footer-container footer {
@@ -259,6 +277,11 @@ a.extern:hover {
            -moz-box-shadow: 0 5px 10px black;
                 box-shadow: 0 5px 10px black;
     }
+    .main aside2{
+        -webkit-box-shadow: 0 5px 10px black;
+           -moz-box-shadow: 0 5px 10px black;
+                box-shadow: 0 5px 10px black;
+    }
 
 /* ============
     WIDE: Menu
@@ -297,6 +320,7 @@ a.extern:hover {
         margin-top: 90px;
         border-left: white 1px;
         border-left-style: solid;
+        background: #1B1B1B
     }
 }
 
@@ -309,6 +333,7 @@ a.extern:hover {
     .wrapper {
         width: 1026px; /* 1140px - 10% for margins */
         margin: 0 auto;
+        border-bottom: solid #ffffff;
     }
 }
 
