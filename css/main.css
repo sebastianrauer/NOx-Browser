@@ -2,7 +2,7 @@
 
 html {
     color: #d4d4d4;
-    font-size: 0.8em;
+    font-size: 0.9em;
     line-height: 1.2;
     font-family: 'Palanquin', sans-serif;
 }
@@ -150,6 +150,12 @@ mapsection
 .main article h1 {
   color: white;
 font-family: 'Martel';
+    font-size: 2.2em;
+    line-height: 1.3em;
+}
+.h1treemap {
+    color: white;
+    font-family: 'Martel';
     font-size: 2.2em;
     line-height: 1.3em;
 }
