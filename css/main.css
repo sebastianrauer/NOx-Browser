@@ -13,8 +13,9 @@ html {
 }
 .peking
 {
+    color:#121212;
     width: 100%;
-    height: 400px;
+    height: 600px;
     background-image: url("../img/peking.png");
     background-repeat: no-repeat;
     background-attachment: fixed;
@@ -106,7 +107,11 @@ line-height: 1.6;
 
 .title {
     color: white;
-    font-family: 'Martel';    
+    font-family: 'Martel';
+}
+#logo {
+    background-image: url("../img/logo.png");
+    background-repeat: no-repeat;   
 }
 
 /* ==============
@@ -186,6 +191,14 @@ mapsection
     color: white;
     padding: 0px 5% 10px;
 }
+.main aside3 {
+        background-color: #1B1B1B;
+  font-family: 'Palanquin', sans-serif;
+    font-size: 0.9em;
+  line-height: 1.2em;
+    color: white;
+    padding: 0px 5% 10px;
+}
 .MessstationenTreemap{
     background-color: black;
 
@@ -195,6 +208,8 @@ mapsection
     color: white;
     padding: 20px 0;
     border-top: 1px solid white;
+    background-image: url("../img/fhp.svg");
+    background-repeat: no-repeat;
 }
 
 /* ===============
@@ -290,7 +305,11 @@ a.extern:hover {
            -moz-box-shadow: 0 5px 10px black;
                 box-shadow: 0 5px 10px black;
     }
-
+    .main aside3{
+        -webkit-box-shadow: 0 5px 10px black;
+           -moz-box-shadow: 0 5px 10px black;
+                box-shadow: 0 5px 10px black;
+    }
 /* ============
     WIDE: Menu
    ============ */
@@ -323,6 +342,14 @@ a.extern:hover {
 
     }
     .main aside2 {
+        float: right;
+        width: 28%;
+        margin-top: 90px;
+        border-left: white 1px;
+        border-left-style: solid;
+        background: #1B1B1B
+    }
+    .main aside3 {
         float: right;
         width: 28%;
         margin-top: 90px;
