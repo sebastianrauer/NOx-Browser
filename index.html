@@ -1,260 +1,314 @@
-<!doctype html>
+<!DOCTYPE html>
+
 <html class="no-js" lang="">
-    <head>
-        <meta charset="utf-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-        <title>NOx Browser</title>
-        <meta name="description" content="">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link rel="apple-touch-icon" href="apple-touch-icon.png">
+<head>
+    <meta charset="utf-8">
+    <meta content="IE=edge,chrome=1" http-equiv="X-UA-Compatible">
 
-        <!-- //CSS -->
-        <link rel="stylesheet" href="css/normalize.min.css">
-        <link rel="stylesheet" href="css/main.css">
+    <title>NOx Browser</title>
+    <meta content="" name="description">
+    <meta content="width=device-width, initial-scale=1" name="viewport">
+    <link href="apple-touch-icon.png" rel="apple-touch-icon"><!-- //CSS -->
+    <link href="css/normalize.min.css" rel="stylesheet">
+    <link href="css/main.css" rel="stylesheet"><!-- //TYPE GERAFFEL -->
+    <link href="https://fonts.googleapis.com/css?family=Martel:600|Palanquin:300" rel="stylesheet">
+    <script src="js/vendor/modernizr-2.8.3-respond-1.4.2.min.js">
+    </script><!-- //MAPBOX GERAFFEL -->
 
-        <!-- //TYPE GERAFFEL -->
-        <link href="https://fonts.googleapis.com/css?family=Martel:600|Palanquin:300" rel="stylesheet">
-        <script src="js/vendor/modernizr-2.8.3-respond-1.4.2.min.js"></script>
+    <script src='https://api.mapbox.com/mapbox-gl-js/v0.34.0/mapbox-gl.js'>
+    </script>
+    <link href='https://api.mapbox.com/mapbox-gl-js/v0.34.0/mapbox-gl.css' rel='stylesheet'><!-- //CHARTS GERAFFEL -->
 
-        <!-- //MAPBOX GERAFFEL -->
-        <script src='https://api.mapbox.com/mapbox-gl-js/v0.34.0/mapbox-gl.js'></script>
-        <link href='https://api.mapbox.com/mapbox-gl-js/v0.34.0/mapbox-gl.css' rel='stylesheet' />
+    <script src="https://code.highcharts.com/highcharts.js">
+    </script>
+    <script src="https://code.highcharts.com/modules/treemap.js">
+    </script>
+</head>
 
-        <!-- //CHARTS GERAFFEL -->
-        <script src="https://code.highcharts.com/highcharts.js"></script>
-        <script src="https://code.highcharts.com/modules/treemap.js"></script>
+<body>
+    <div class="header-container">
+        <header class="wrapper clearfix">
+            <h1 class="title">NO<sub>2</sub> in Deutschland</h1>
 
-    </head>
-   
-    <body>
-        <div class="header-container">
-            <header class="wrapper clearfix">
-                <h1 class="title">test
-                </h1>
-                <nav>
-                    <ul>
-                        <li><a href="#tool">The Tool</a></li>
-                        <li><a href="#about">About</a></li>
-                        <li><a href="#impressum">Impressum</a></li>
-                    </ul>
-                </nav>
-            </header>
-        </div>
-        <mapsection id="tool">
+
+            <nav>
+                <ul>
+                    <li>
+                        <a href="#bg">Hintergrund</a>
+                    </li>
+                    <li>
+                        <a href="#download">Download</a>
+                    </li>
+                    <li>
+                        <a href="#contact">Kontakt</a>
+                    </li>
+                </ul>
+            </nav>
+        </header>
+    </div>
+
+
+    <section class="header" id="image">
+    </section>
+    <!-- <mapsection id="tool">
             <div id='map' style='width: 100%; top: 80px; height:500px;'></div>
-        </mapsection>
+        </mapsection> -->
 
-        <div class="main-container">
-            <div class="main wrapper clearfix">
 
-                <article>
-                    <header>
-                        <h1>Another One Bites The Dust</h1>
-                        <p>Entgegen der rückläufigen Belastung der Atemluft mit Feinstaubpartikeln in Deutschland zeigen Daten, dass der sogenannte sekundäre Feinstaub eine negative Entwicklung der letzten Jahre aufweist. Die durch den sekundären Feinstaub entstehenden Emissionen sind eine große Herausforderung für die Gesundheit von Menschen und Umwelt.<br><br> Unter dem Sammelbegriff Stickoxide (NOx) verbergen sich die für den sekundären Feinstaub verantwortlichen gasförmigen Schadstoffe wie Ammoniak, Schwefeldioxid und Stickstoffoxiden. <a class="extern" href="#">Aktuelle Forschungen</a> ergeben, dass die gesundheitliche Belastung in Städten durch Feinstaubemissionen besonders hoch ist. Bei einer Belastung über einen längeren Zeitraum ergeben sich ernsthafte Schäden an Lunge und Herz.
-                        </p>
-                    </header>
-                    </div>
-            <section id="image">
-                <div class="peking">
-        <div class="main-container">
-            <div class="main wrapper clearfix">
+    <div class="main-container">
+        <div class="main wrapper clearfix">
             <article>
-                    <header>
-                <h1>Schwellenländer Abschnitt</h1>
-                        <p>Entgegen der rückläufigen Belastung der Atemluft mit Feinstaubpartikeln in Deutschland zeigen Daten, dass der sogenannte sekundäre Feinstaub eine negative Entwicklung der letzten Jahre aufweist. Die durch den sekundären Feinstaub entstehenden Emissionen sind eine große Herausforderung für die Gesundheit von Menschen und Umwelt.<br><br> Unter dem Sammelbegriff Stickoxide (NOx) verbergen sich die für den sekundären Feinstaub verantwortlichen gasförmigen Schadstoffe wie Ammoniak, Schwefeldioxid und Stickstoffoxiden. <a class="extern" href="#">Aktuelle Forschungen</a> ergeben, dass die gesundheitliche Belastung in Städten durch Feinstaubemissionen besonders hoch ist. Bei einer Belastung über einen längeren Zeitraum ergeben sich ernsthafte Schäden an Lunge und Herz.
-                        </p>
-                        </header>
+                <header>
+                    <h1>Die Situation</h1>
+
+
+                    <p>Entgegen der rückläufigen Belastung der Atemluft mit Feinstaubpartikeln in Deutschland zeigen Daten, dass der sogenannte sekundäre Feinstaub eine negative Entwicklung der letzten Jahre aufweist. Die durch den sekundären Feinstaub entstehenden Emissionen sind eine große Herausforderung für die Gesundheit von Menschen und Umwelt.<br>
+                    <br>
+                    Unter dem Sammelbegriff Stickoxide (NOx) verbergen sich die für den sekundären Feinstaub verantwortlichen gasförmigen Schadstoffe wie Ammoniak, Schwefeldioxid und Stickstoffoxiden. <a class="extern" href="#">Aktuelle Forschungen</a> ergeben, dass die gesundheitliche Belastung in Städten durch Feinstaubemissionen besonders hoch ist. Bei einer Belastung über einen längeren Zeitraum ergeben sich ernsthafte Schäden an Lunge und Herz.</p>
+                </header>
+            </article>
+        </div>
+
+
+        <section id="image">
+            <div class="berlin">
+                <div class="main-container">
+                    <div class="main wrapper clearfix">
+                        <article>
+                            <header>
+                                <h1>Schwellenländer Abschnitt</h1>
+
+
+                                <p>Entgegen der rückläufigen Belastung der Atemluft mit Feinstaubpartikeln in Deutschland zeigen Daten, dass der sogenannte sekundäre Feinstaub eine negative Entwicklung der letzten Jahre aufweist. Die durch den sekundären Feinstaub entstehenden Emissionen sind eine große Herausforderung für die Gesundheit von Menschen und Umwelt.<br>
+                                <br>
+                                Unter dem Sammelbegriff Stickoxide (NOx) verbergen sich die für den sekundären Feinstaub verantwortlichen gasförmigen Schadstoffe wie Ammoniak, Schwefeldioxid und Stickstoffoxiden. <a class="extern" href="#">Aktuelle Forschungen</a> ergeben, dass die gesundheitliche Belastung in Städten durch Feinstaubemissionen besonders hoch ist. Bei einer Belastung über einen längeren Zeitraum ergeben sich ernsthafte Schäden an Lunge und Herz.</p>
+                            </header>
                         </article>
-                        <aside3>
-                    <h3>Andere Länder</h3>
-                    <p>Diese Website bietet dir einen Einblick in die NO2 Emission in Deutschland. Mit Hilfe der Übersichtskarte kannst du erkennen welche Regionen besonders hoch belastet sind.<br><br> Mit Hilfe des Städterankings kannst du deutsche Großstädte miteinander vergleichen.</p>
-                </aside3>
-</div>
-</div>
-                        </div>
-            </section>
-<div class="main-container">
+
+                        <aside>
+                        <h3>Die Daten</h3>
+
+
+                        <p>Für dieses Projekt wurden mehrere Datenquellen angezapft:<br>
+                        <br>
+                        NO2 Emission in Deutschland: <b>Umweltbundesamt</b>
+                        <br><br>
+                        Temperatur, Wind und Niederschlag: <b>Deutscher Wetterdienst</b>
+                        <br>
+
+                        </p>
+                    </div>
+                    </aside>
+                </div>
+            </div>
+        </section>
+
+
+        <div class="main-container">
             <div class="main wrapper clearfix">
                 <article>
                     <header>
                         <h1>Visuelle Exploration</h1>
-                        <p>In vielen städtebauliche Prozesse sind Informationen über Gesundheitsgefahren für Umwelt und Bewohner immens wichtig. Durch die visuelle Aufbereitung der Daten werden eventuelle Kommunikationslücken geschlossen und Diskussionen eröffnet. Zusätzlich ermöglicht diese Arbeit es eine bessere Zugänglichkeit dieser Informationen durch Visualisierungen zu gewährleisten und ein breiteres Publikum zu erreichen umso entsprechend einen größeren Aktionsradius zu aktivieren.<br><br>In vielen städtebaulichen Prozessen sind Informationen über Gesundheitsgefahren für Umwelt und Bewohner immens wichtig. Durch die visuelle Aufbereitung der Daten werden eventuelle Kommunikationslücken geschlossen und Diskussionen eröffnet. Zusätzlich ermöglicht diese Arbeit es eine bessere Zugänglichkeit dieser Informationen durch Visualisierungen zu gewährleisten und ein breiteres Publikum zu erreichen umso entsprechend einen größeren Aktionsradius zu aktivieren.</p>
-                    </section>
-                    <footer>
-                        <h3>article footer h3</h3>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam sodales urna non odio egestas tempor. Nunc vel vehicula ante. Etiam bibendum iaculis libero, eget molestie nisl pharetra in. In semper consequat est, eu porta velit mollis nec. Curabitur posuere enim eget turpis feugiat tempor.</p>
-                    </footer>
-                    <header id="impressum">
-                        <h1>Aufteilung aller 397 Messstationen in Deutschland</h1>
-                        <p>Das Umweltbundesamt teilt die Messstationen in drei verschiedene Kategorien ein: <b>Hintergrund</b>, <b>Verkehr</b> und <b>Industrie</b>. Diese Kategorien werden ungleichmäßig auf 7 verschiedene  Orte verteilt. Dazu zählen ländlich abgelegen, ländlich regional, ländlich stadtnah, ländliches Gebiet, städtisches Gebiet und vorstädtisches Gebiet. Die nachfolgende interaktive Grafik zeigt wie sich sämtliche in Deutschland aufgestellten Messstationen verteilen.</p>
+
+
+                        <p>In vielen städtebauliche Prozesse sind Informationen über Gesundheitsgefahren für Umwelt und Bewohner immens wichtig. Durch die visuelle Aufbereitung der Daten werden eventuelle Kommunikationslücken geschlossen und Diskussionen eröffnet. Zusätzlich ermöglicht diese Arbeit es eine bessere Zugänglichkeit dieser Informationen durch Visualisierungen zu gewährleisten und ein breiteres Publikum zu erreichen umso entsprechend einen größeren Aktionsradius zu aktivieren.<br>
+                        <br>
+                        In vielen städtebaulichen Prozessen sind Informationen über Gesundheitsgefahren für Umwelt und Bewohner immens wichtig. Durch die visuelle Aufbereitung der Daten werden eventuelle Kommunikationslücken geschlossen und Diskussionen eröffnet. Zusätzlich ermöglicht diese Arbeit es eine bessere Zugänglichkeit dieser Informationen durch Visualisierungen zu gewährleisten und ein breiteres Publikum zu erreichen umso entsprechend einen größeren Aktionsradius zu aktivieren.</p>
+
+
+                        <footer>
+                            <h3>article footer h3</h3>
+
+
+                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam sodales urna non odio egestas tempor. Nunc vel vehicula ante. Etiam bibendum iaculis libero, eget molestie nisl pharetra in. In semper consequat est, eu porta velit mollis nec. Curabitur posuere enim eget turpis feugiat tempor.</p>
+                        </footer>
+
+
+                        <header id="impressum">
+                            <h1>Aufteilung aller 397 Messstationen in Deutschland</h1>
+
+
+                            <p>Das Umweltbundesamt teilt die Messstationen in drei verschiedene Kategorien ein: <b>Hintergrund</b>, <b>Verkehr</b> und <b>Industrie</b>. Diese Kategorien werden ungleichmäßig auf 7 verschiedene Orte verteilt. Dazu zählen ländlich abgelegen, ländlich regional, ländlich stadtnah, ländliches Gebiet, städtisches Gebiet und vorstädtisches Gebiet. Die nachfolgende interaktive Grafik zeigt wie sich sämtliche in Deutschland aufgestellten Messstationen verteilen.</p>
+                        </header>
                     </header>
                 </article>
+
+
                 <aside>
-                    <h3>Funktion</h3>
-                    <p>Diese Website bietet dir einen Einblick in die NO2 Emission in Deutschland. Mit Hilfe der Übersichtskarte kannst du erkennen welche Regionen besonders hoch belastet sind.<br><br> Mit Hilfe des Städterankings kannst du deutsche Großstädte miteinander vergleichen.</p>
+                    <h3>Legende</h3>
+
+
+                    <p>Zum besseren Verständnis für die Visualisierung:<br>
+                    <br>
+                    Mit Hilfe des Städterankings kannst du deutsche Großstädte miteinander vergleichen.</p>
                 </aside>
-                </div>
-             <!-- #main-container -->
-            </div> <!-- #main -->
-        
-<div id="MessstationenTreemap" style="stroke-width:0px; background-color: black; stroke:#000000; width: 100%; height: 500px; margin: 0 auto"></div>
+            </div>
+            <!-- #main-container -->
+        </div>
+        <!-- #main -->
 
 
-    <div class="main-container">
+        <div id="MessstationenTreemap" style="stroke-width:0px; background-color: white; stroke:#ffffff; width: 100%; height: 500px; margin: 0 auto">
+        </div>
+
+
+        <div class="main-container">
             <div class="main wrapper clearfix">
                 <article>
                     <header>
-                    <h1 class="afterviz">Umweltgerechtigkeit?</h1>
-                    <p>Mit einem kritischen Blick auf die Entwicklung von Großstädten außerhalb Europas werden immense Herausforderungen deutlich. Ein kürzlich veröffentlichter Artikel gibt einen Überblick über die Lage der Luftverunreinigungen in Städten wie zum Beispiel: Peking, Teheran und Delhi.<br><br> Die Herausforderungen sind in vielen Städten ähnlich: durch die rapide Urbanisierung, das schnelle Anwachsen von Industrie und der Vervielfältigung des Verkehrsaufkommens auf den Straßen, ist es schwierig die Grenzwerte für Überschreitungen von Fein- und Feinsstaub in den Griff zu bekommen. Es sind in der Regel Städte in den sogenannten Schwellenländern die unter massiven Luftverunreinigungen leiden.</p>
-                </header>
-            </article>
-            <aside2>
-                    <h3>Datenquellen</h3>
-                    <p>Diese Website bietet dir einen Einblick in die NO2 Emission in Deutschland. Mit Hilfe der Übersichtskarte kannst du erkennen welche Regionen besonders hoch belastet sind.<br><br> Mit Hilfe des Städterankings kannst du deutsche Großstädte miteinander vergleichen.</p>
-                </aside2>
+                        <h1 class="afterviz">Umweltgerechtigkeit?</h1>
+
+
+                        <p>Mit einem kritischen Blick auf die Entwicklung von Großstädten außerhalb Europas werden immense Herausforderungen deutlich. Ein kürzlich veröffentlichter Artikel gibt einen Überblick über die Lage der Luftverunreinigungen in Städten wie zum Beispiel: Peking, Teheran und Delhi.<br>
+                        <br>
+                        Die Herausforderungen sind in vielen Städten ähnlich: durch die rapide Urbanisierung, das schnelle Anwachsen von Industrie und der Vervielfältigung des Verkehrsaufkommens auf den Straßen, ist es schwierig die Grenzwerte für Überschreitungen von Fein- und Feinsstaub in den Griff zu bekommen. Es sind in der Regel Städte in den sogenannten Schwellenländern die unter massiven Luftverunreinigungen leiden.</p>
+                    </header>
+                </article>
+            </div>
         </div>
-    </div>
+
 
         <div class="footer-container">
             <footer class="wrapper">
-                <p>Copyright (c) 2017 Sebastian Rauer</p>
+                <p id="copyright">Copyright &copy; 2017 Sebastian Rauer</p>
             </footer>
         </div>
-
-        <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
-        <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.11.2.min.js"><\/script>')</script>
-
-        <script src="js/main.js"></script>
-
-        <!-- MAPBOX -->
+        <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js">
+        </script> 
         <script>
-            mapboxgl.accessToken = 'pk.eyJ1IjoicmF1ZXJzZWJhc3RpYW4iLCJhIjoiY2owOXRyemQ0MGFxYTJ3bnlidm11OGsxaiJ9.x5S9zEf7rbi9c_it9cECCw';
-            var map = new mapboxgl.Map({
-                container: 'map',
-                style: 'mapbox://styles/rauersebastian/cj21jlchi005e2spw4d1lqhc7'
-            });
-        </script>
-        <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
-        
-        <!-- ANALYTICS -->
+        window.jQuery || document.write('<script src="js/vendor/jquery-1.11.2.min.js"><\/script>')
+        </script> 
+        <script src="js/main.js">
+        </script> <!-- MAPBOX -->
+         
         <script>
-            (function(b,o,i,l,e,r){b.GoogleAnalyticsObject=l;b[l]||(b[l]=
-            function(){(b[l].q=b[l].q||[]).push(arguments)});b[l].l=+new Date;
-            e=o.createElement(i);r=o.getElementsByTagName(i)[0];
-            e.src='//www.google-analytics.com/analytics.js';
-            r.parentNode.insertBefore(e,r)}(window,document,'script','ga'));
-            ga('create','UA-XXXXX-X','auto');ga('send','pageview');
-        </script>
-        
-        <!-- HIGHCHARTS -->
+                  mapboxgl.accessToken = 'pk.eyJ1IjoicmF1ZXJzZWJhc3RpYW4iLCJhIjoiY2owOXRyemQ0MGFxYTJ3bnlidm11OGsxaiJ9.x5S9zEf7rbi9c_it9cECCw';
+                  var map = new mapboxgl.Map({
+                      container: 'map',
+                      style: 'mapbox://styles/rauersebastian/cj21jlchi005e2spw4d1lqhc7'
+                  });
+        </script> <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
+         <!-- ANALYTICS -->
+         
+        <script>
+                  (function(b,o,i,l,e,r){b.GoogleAnalyticsObject=l;b[l]||(b[l]=
+                  function(){(b[l].q=b[l].q||[]).push(arguments)});b[l].l=+new Date;
+                  e=o.createElement(i);r=o.getElementsByTagName(i)[0];
+                  e.src='//www.google-analytics.com/analytics.js';
+                  r.parentNode.insertBefore(e,r)}(window,document,'script','ga'));
+                  ga('create','UA-XXXXX-X','auto');ga('send','pageview');
+        </script> <!-- HIGHCHARTS -->
+         
         <script type="text/javascript">
-            Highcharts.chart('MessstationenTreemap', {
-            chart:{
-                borderColor: '#121212',
-                borderWidth: 20
+                  Highcharts.chart('MessstationenTreemap', {
+                  chart:{
+                      borderColor: '#ffffff',
+                      borderWidth: 20
 
-            },
-            series: [{
-            allowDrillToNode: true,
-            type: "treemap",
-            backgroundColor: '#000',
-            layoutAlgorithm: 'stripes',
-            alternateStartingDirection: true,
-            levels: [{
-                borderColor: "white",
-                borderWidth: 1,
-                level: 1,
-                layoutAlgorithm: 'stripes',
-                dataLabels: {
-                  shadow: 'false',
-                    enabled: true,
-                    align: 'left',
-                    color: 'white',
-                    left:'20px',
-                    verticalAlign: 'top',
-                    style: {
-                        fontFamily: 'Palanquin',
-                        fontSize: '22px',
-                        textOutline: false,              
-                        fontWeight: 'normal'
+                  },
+                  series: [{
+                  allowDrillToNode: true,
+                  type: "treemap",
+                  backgroundColor: '#ffffff',
+                  layoutAlgorithm: 'stripes',
+                  alternateStartingDirection: true,
+                  levels: [{
+                      borderColor: "black",
+                      borderWidth: 2,
+                      level: 1,
+                      layoutAlgorithm: 'stripes',
+                      dataLabels: {
+                          shadow: 'false',
+                          enabled: true,
+                          align: 'left',
+                          color: 'black',
+                          left:'20px',
+                          verticalAlign: 'top',
+                          style: {
+                              fontFamily: 'Palanquin',
+                              fontSize: '22px',
+                              textOutline: false,              
+                              fontWeight: 'normal'
+                            }
                       }
+                      }],
+                      data: [{
+                          id: 'A',
+                          name: 'Hintergrund',
+                          color: "white",
+                          fontSize: '28px',
+                      }, {
+                          id: 'B',
+                          name: 'Industrie',
+                          color: "white"
+                      }, {
+                          id: 'C',
+                          name: 'Verkehr',
+                          color: 'white'
+                      }, {
+                          name: 'ländlich abgelegen',
+                          parent: 'A',
+                          value: 6*3
+                      }, {
+                          name: 'ländlich regional',
+                          parent: 'A',
+                          value: 26
+                      }, {
+                          name: 'ländlich regional',
+                          parent: 'B',
+                          value: 1*3
+                      },  {
+                          name: 'ländlich stadtnah',
+                          parent: 'A',
+                          value: 12
+                      },  {
+                          name: 'ländlich stadtnah',
+                          parent: 'B',
+                          value: 2*3
+                      }, {
+                          name: 'ländlich stadtnah',
+                          parent: 'C',
+                          value: 1*3
+                      },  {
+                          name: 'ländliches Gebiet',
+                          parent: 'A',
+                          value: 32
+                      }, {
+                          name: 'ländliches Gebiet',
+                          parent: 'B',
+                          value: 1*3
+                      }, {
+                          name: 'städtisches Gebiet',
+                          parent: 'A',
+                          value: 102
+                      }, {
+                          name: 'städtisches Gebiet',
+                          parent: 'B',
+                          value: 9*3
+                      }, {
+                          name: 'städtisches Gebiet',
+                          parent: 'C',
+                          value: 125
+                      }, {
+                          name: 'vorstädtisches Gebiet',
+                          parent: 'A',
+                          value: 67
+                      },  {
+                          name: 'vorstädtisches Gebiet',
+                          parent: 'B',
+                          value: 10
+                      },   {
+                          name: 'vorstädtisches Gebiet',
+                          parent: 'C',
+                          value: 3*3
+                      }]
+                  }],
+                  title: {
+                      text: null,
                 }
-                }],
-                data: [{
-                    id: 'A',
-                    name: 'Hintergrund',
-                    color: "black",
-                    fontSize: '28px',
-                }, {
-                    id: 'B',
-                    name: 'Industrie',
-                    color: "black"
-                }, {
-                    id: 'C',
-                    name: 'Verkehr',
-                    color: 'black'
-                }, {
-                    name: 'ländlich abgelegen',
-                    parent: 'A',
-                    value: 6*3
-                }, {
-                    name: 'ländlich regional',
-                    parent: 'A',
-                    value: 26
-                }, {
-                    name: 'ländlich regional',
-                    parent: 'B',
-                    value: 1*3
-                },  {
-                    name: 'ländlich stadtnah',
-                    parent: 'A',
-                    value: 12
-                },  {
-                    name: 'ländlich stadtnah',
-                    parent: 'B',
-                    value: 2*3
-                }, {
-                    name: 'ländlich stadtnah',
-                    parent: 'C',
-                    value: 1*3
-                },  {
-                    name: 'ländliches Gebiet',
-                    parent: 'A',
-                    value: 32
-                }, {
-                    name: 'ländliches Gebiet',
-                    parent: 'B',
-                    value: 1*3
-                }, {
-                    name: 'städtisches Gebiet',
-                    parent: 'A',
-                    value: 102
-                }, {
-                    name: 'städtisches Gebiet',
-                    parent: 'B',
-                    value: 9*3
-                }, {
-                    name: 'städtisches Gebiet',
-                    parent: 'C',
-                    value: 125
-                }, {
-                    name: 'vorstädtisches Gebiet',
-                    parent: 'A',
-                    value: 67
-                },  {
-                    name: 'vorstädtisches Gebiet',
-                    parent: 'B',
-                    value: 10
-                },   {
-                    name: 'vorstädtisches Gebiet',
-                    parent: 'C',
-                    value: 3*3
-                }]
-            }],
-            title: {
-                text: null,
-          }
-});
-</script>
-    </body>
+        });
+
+        </script>
+    </div>
+</body>
 </html>

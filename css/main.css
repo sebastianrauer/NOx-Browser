@@ -1,7 +1,7 @@
 /*! HTML5 Boilerplate v5.0 | MIT License | http://h5bp.com/ */
 
 html {
-    color: #d4d4d4;
+    color: #121212;
     font-size: 0.9em;
     line-height: 1.2;
     font-family: 'Palanquin', sans-serif;
@@ -72,7 +72,7 @@ textarea {
    ========================================================================== */
 
 body {
-background-color: #121212;
+background-color: white;
 font-size: 1.2em;
 line-height: 1.6;
 }
@@ -86,7 +86,6 @@ line-height: 1.6;
    =================== */
 
 .header-container {
-    border-bottom: 1px solid white;
     position: fixed;
     width: 100%;
     display:block;
@@ -97,21 +96,33 @@ line-height: 1.6;
 .footer-container,
 .main aside {
 }
+.main car {
+    background-image: url("../img/car.svg"); 
+    font-family: 'Palanquin', sans-serif;
+    font-size: 0.9em;
+    line-height: 1.2em;
+    color: #121212;
+    padding: 0px 5% 10px;
+}
 
 .header-container,
 .footer-container,
 .main aside {
-    background: #121212
-;
+    background: white;
 }
 
 .title {
-    color: white;
+    color: black;
     font-family: 'Martel';
 }
 #logo {
     background-image: url("../img/logo.png");
     background-repeat: no-repeat;   
+}
+#copyright
+{
+    text-align: right;
+    size: 0.7em;
 }
 
 /* ==============
@@ -133,17 +144,15 @@ nav a {
     text-decoration: none;
     font-weight: bold;
 
-    color: white;
-    background: #121212;
-}
-
-nav a:hover,
-nav a:visited {
-    color: white;
+    color: #121212;
+    background: white;
 }
 
 nav a:hover {
-    text-decoration: underline;
+    color: #B7B7B7;
+}
+nav a:visited {
+    color: black;
 }
 
 /* ==============
@@ -155,13 +164,37 @@ mapsection
     width: 100%;
     height:500px;
 }
-
+.header
+{
+    color:#121212;
+    width: 100%;
+    height: 650px;
+    background-image: url("../img/header_start.svg");
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: contain;
+}
+/*.berlin
+{
+    color:#121212;
+    width: 100%;
+    height: 800px;
+    background-image: url("../img/header.png");
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: contain;
+}*/
+#image
+{
+    width: 100%;
+    background-attachment: fixed;
+}
 .main {
     padding: 30px 0;
 }
 
 .main article h1 {
-    color: white;
+    color: #121212;
     font-family: 'Martel';
     font-size: 2.2em;
     line-height: 1.3em;
@@ -169,18 +202,25 @@ mapsection
 
 .afterviz {
     margin-top: -10px;
-    color: white;
+    color: #121212;
     font-family: 'Martel';
     font-size: 2.2em;
     line-height: 1.3em;
 }
-
+.main car {
+    background-image: url("../img/car.svg"); 
+    font-family: 'Palanquin', sans-serif;
+    font-size: 0.9em;
+    line-height: 1.2em;
+    color: #121212;
+    padding: 0px 5% 10px;
+}
 .main aside {
     background-color: #1B1B1B;
   font-family: 'Palanquin', sans-serif;
   font-size: 0.9em;
   line-height: 1.2em;
-    color: white;
+    color: #121212;
     padding: 0px 5% 10px;
 }
 .main aside2 {
@@ -188,7 +228,7 @@ mapsection
   font-family: 'Palanquin', sans-serif;
     font-size: 0.9em;
   line-height: 1.2em;
-    color: white;
+    color: #121212;
     padding: 0px 5% 10px;
 }
 .main aside3 {
@@ -196,16 +236,30 @@ mapsection
   font-family: 'Palanquin', sans-serif;
     font-size: 0.9em;
   line-height: 1.2em;
-    color: white;
+    color: #121212;
     padding: 0px 5% 10px;
 }
+svg-control {
+    background-color: white;
+    font-family: 'Palanquin', sans-serif;
+    font-size: 0.9em;
+    line-height: 1.2em;
+    color: #121212;
+    padding: 0px 10% 20px;
+}
+button{
+    border-color: none;
+    color:black;
+    background-color: white;
+    border: none;
+}
 .MessstationenTreemap{
-    background-color: black;
+    background-color: white;
 
 }
 
 .footer-container footer {
-    color: white;
+    color: #121212;
     padding: 20px 0;
     border-top: 1px solid white;
     background-image: url("../img/fhp.svg");
@@ -228,7 +282,7 @@ mapsection
 a.extern {
     transition-duration: 0.5s;
     text-decoration:none;
-    color: white;
+    color: black;
         background-size: 10px 10px;
 
     padding-right: 5px;
@@ -237,8 +291,8 @@ a.extern {
 
 a.extern:hover {
     text-decoration:bold;
-    color: white;
-    background-color: white;
+    color: black;
+    background-color: black;
     background: url(chain.svg) no-repeat top right;
     background-size: 10px 10px;
     padding-right: 5px;
@@ -261,9 +315,9 @@ a.extern:hover {
 
     nav a {
         float: left;
-        width: 27%;
+        width: 25%;
         margin: 0 1.7%;
-        padding: 25px 2%;
+        padding: 30px 2%;
         margin-bottom: 0;
     }
 
@@ -295,21 +349,21 @@ a.extern:hover {
    ==================== */
 
     .header-container,
-    .main aside {
-        -webkit-box-shadow: 0 5px 10px black;
-           -moz-box-shadow: 0 5px 10px black;
-                box-shadow: 0 5px 10px black;
+    /*.main aside {
+        -webkit-box-shadow: 0 1px 0px black;
+           -moz-box-shadow: 0 1px 0px black;
+                box-shadow: 0 1px 0px black;
     }
     .main aside2{
-        -webkit-box-shadow: 0 5px 10px black;
-           -moz-box-shadow: 0 5px 10px black;
-                box-shadow: 0 5px 10px black;
+        -webkit-box-shadow: 0 1px 0px black;
+           -moz-box-shadow: 0 1px 0px black;
+                box-shadow: 0 1px 0px black;
     }
     .main aside3{
-        -webkit-box-shadow: 0 5px 10px black;
-           -moz-box-shadow: 0 5px 10px black;
-                box-shadow: 0 5px 10px black;
-    }
+        -webkit-box-shadow: 0 1px 0px black;
+           -moz-box-shadow: 0 1px 0px black;
+                box-shadow: 0 1px 0px black;
+    }*/
 /* ============
     WIDE: Menu
    ============ */
@@ -330,32 +384,49 @@ a.extern:hover {
     .main article {
         float: left;
         width: 57%;
-        margin-top: 90px;
+        /*margin-top: 90px;*/
     }
+    .main car {
+    background-image: url("../img/car.svg"); 
+    font-family: 'Palanquin', sans-serif;
+    font-size: 0.9em;
+    line-height: 1.2em;
+    color: #121212;
+    padding: 0px 5% 10px;
+}
 
     .main aside {
         float: right;
         width: 28%;
-    margin-top: 90px;
-            border-left: white 1px;
-            border-left-style: solid;
+        margin-top: 90px;
+        border-left: black 1px;
+        border-left-style: solid;
+        background: white;
 
     }
     .main aside2 {
         float: right;
         width: 28%;
         margin-top: 90px;
-        border-left: white 1px;
+        border-left: black 1px;
         border-left-style: solid;
-        background: #1B1B1B
+        background: white;
     }
     .main aside3 {
         float: right;
         width: 28%;
         margin-top: 90px;
-        border-left: white 1px;
+        border-left: black 1px;
         border-left-style: solid;
-        background: #1B1B1B
+        background: white;
+    }
+    .main aside_control {
+        float: right;
+        width: 28%;
+        margin-top: 90px;
+        border-left: black 1px;
+        border-left-style: solid;
+        background: white;
     }
 }
 
