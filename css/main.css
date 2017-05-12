@@ -85,12 +85,16 @@ line-height: 1.6;
     ALL: Orange Theme
    =================== */
 
-.header-container {
+.nav-down {
     position: fixed;
     width: 100%;
     display:block;
     top: 0px;
+    transition: top 0.2s ease-in-out;
     z-index: 10;
+}
+.nav-up {
+  top: -40px; // same as header height. use variables in LESS/SASS
 }
 
 .footer-container,
@@ -105,7 +109,7 @@ line-height: 1.6;
     padding: 0px 5% 10px;
 }
 
-.header-container,
+.nav-down,
 .footer-container,
 .main aside {
     background: white;
@@ -114,10 +118,6 @@ line-height: 1.6;
 .title {
     color: black;
     font-family: 'Martel';
-}
-#logo {
-    background-image: url("../img/logo.png");
-    background-repeat: no-repeat;   
 }
 #copyright
 {

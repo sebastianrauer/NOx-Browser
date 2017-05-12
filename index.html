@@ -13,11 +13,17 @@
     <link href="css/main.css" rel="stylesheet"><!-- //TYPE GERAFFEL -->
     <link href="https://fonts.googleapis.com/css?family=Martel:600|Palanquin:300" rel="stylesheet">
     <script src="js/vendor/modernizr-2.8.3-respond-1.4.2.min.js">
-    </script><!-- //MAPBOX GERAFFEL -->
+    </script>
+
+    <!-- //MAPBOX GERAFFEL -->
+    
+    <script src="js/jquery.min.js"></script>
 
     <script src='https://api.mapbox.com/mapbox-gl-js/v0.34.0/mapbox-gl.js'>
     </script>
-    <link href='https://api.mapbox.com/mapbox-gl-js/v0.34.0/mapbox-gl.css' rel='stylesheet'><!-- //CHARTS GERAFFEL -->
+    <link href='https://api.mapbox.com/mapbox-gl-js/v0.34.0/mapbox-gl.css' rel='stylesheet'>
+
+    <!-- //CHARTS GERAFFEL -->
 
     <script src="https://code.highcharts.com/highcharts.js">
     </script>
@@ -26,7 +32,7 @@
 </head>
 
 <body>
-    <div class="header-container">
+    <div class="nav-down">
         <header class="wrapper clearfix">
             <h1 class="title">NO<sub>2</sub> in Deutschland</h1>
 
@@ -167,14 +173,40 @@
             </div>
         </div>
 
+        <div class="main-container">
+        <div class="main wrapper clearfix">
+            <article id="download">
+                <header>
+                    <h1>Resources</h1>
+
+
+                    <p>Lade die Visualisierungen in voller Auflösung herunter. Vielleicht hast du auch Lust auf den schriftlichen Teil der Bachelorarbeit als handliches PDF?<br>
+                    <br>
+                    Unter dem Sammelbegriff Stickoxide (NOx) verbergen sich die für den sekundären Feinstaub verantwortlichen gasförmigen Schadstoffe wie Ammoniak, Schwefeldioxid und Stickstoffoxiden. <a class="extern" href="#">Aktuelle Forschungen</a> ergeben, dass die gesundheitliche Belastung in Städten durch Feinstaubemissionen besonders hoch ist. Bei einer Belastung über einen längeren Zeitraum ergeben sich ernsthafte Schäden an Lunge und Herz.</p>
+                </header>
+            </article>
+        </div>
+
+                <div class="main-container">
+            <div class="main wrapper clearfix">
+                <article>
+                    <header>
+                        <h1>Quellen und Hinweise</h1>
+
+                        <p>Mit einem kritischen Blick auf die Entwicklung von Großstädten außerhalb Europas werden immense Herausforderungen deutlich. Ein kürzlich veröffentlichter Artikel gibt einen Überblick über die Lage der Luftverunreinigungen in Städten wie zum Beispiel: Peking, Teheran und Delhi.<br>
+                        <br>
+                        Die Herausforderungen sind in vielen Städten ähnlich: durch die rapide Urbanisierung, das schnelle Anwachsen von Industrie und der Vervielfältigung des Verkehrsaufkommens auf den Straßen, ist es schwierig die Grenzwerte für Überschreitungen von Fein- und Feinsstaub in den Griff zu bekommen. Es sind in der Regel Städte in den sogenannten Schwellenländern die unter massiven Luftverunreinigungen leiden.</p>
+                    </header>
+                </article>
+            </div>
+        </div>
+
 
         <div class="footer-container">
             <footer class="wrapper">
                 <p id="copyright">Copyright &copy; 2017 Sebastian Rauer</p>
             </footer>
         </div>
-        <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js">
-        </script> 
         <script>
         window.jQuery || document.write('<script src="js/vendor/jquery-1.11.2.min.js"><\/script>')
         </script> 
@@ -309,6 +341,36 @@
         });
 
         </script>
+        <script type="text/javascript">
+                  // Hide Header on on scroll down
+          var didScroll;
+          var lastScrollTop = 0;
+          var navbarHeight = $('header-container').outerHeight();
+
+          $(window).scroll(function(event){
+              didScroll = true;
+          });
+
+          setInterval(function() {
+              if (didScroll) {
+                  hasScrolled();
+                  didScroll = false;
+              }
+          }, 250);
+
+          function hasScrolled() {
+              var st = $(this).scrollTop();
+
+              // If they scrolled down and are past the navbar, add class .nav-up.
+              // This is necessary so you never see what is "behind" the navbar.
+              if (st > lastScrollTop){
+                 $('header-container').removeClass('nav-down').addClass('nav-up');
+              } else {
+                $('header-container').removeClass('nav-up').addClass('nav-down');
+              }
+              lastScrollTop = st;
+          }
+</script>
     </div>
 </body>
 </html>
