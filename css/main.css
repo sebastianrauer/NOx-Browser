@@ -11,29 +11,50 @@ html {
     width: 100%; 
     top: 80px; 
 }
-.peking
+.headerimage
 {
     color:#121212;
     width: 100%;
     height: 600px;
-    background-image: url("../img/peking.png");
+    background-image: url("../img/header.png");
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: contain;
+}
+.urban
+{
+    color:#121212;
+    width: 100%;
+    height: 600px;
+    background-image: url("../img/city/urban.jpg");
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: contain;
+}
+.start
+{
+    color:#121212;
+    width: 100%;
+    height: 600px;
+    background-image: url("../img/city/berlin.jpg");
     background-repeat: no-repeat;
     background-attachment: fixed;
     background-size: contain;
 }
 ::-moz-selection {
-    background: #b3d4fc;
+    background: #F29999;
     text-shadow: none;
 }
 
 ::selection {
-    background: #b3d4fc;
+    background: #F29999;
     text-shadow: none;
 }
 
 hr {
     display: block;
     height: 1px;
+    width: 75%;
     border: 0;
     border-top: 1px solid #ccc;
     margin: 1em 0;
@@ -47,6 +68,7 @@ img,
 svg,
 video {
     vertical-align: middle;
+    border-style: none;
 }
 
 fieldset {
@@ -91,7 +113,7 @@ line-height: 1.6;
     display:block;
     top: 0px;
     transition: top 0.2s ease-in-out;
-    z-index: 10;
+    z-index: 10; 
 }
 .nav-up {
   top: -40px; // same as header height. use variables in LESS/SASS
@@ -100,14 +122,14 @@ line-height: 1.6;
 .footer-container,
 .main aside {
 }
-.main car {
+/*.main car {
     background-image: url("../img/car.svg"); 
     font-family: 'Palanquin', sans-serif;
     font-size: 0.9em;
     line-height: 1.2em;
     color: #121212;
     padding: 0px 5% 10px;
-}
+}*/
 
 .nav-down,
 .footer-container,
@@ -138,11 +160,11 @@ nav ul {
 nav a {
     display: block;
     margin-bottom: 10px;
-    padding: 15px 0;
+    padding: 5px 0;
 
-    text-align: center;
+    text-align: left;
     text-decoration: none;
-    font-weight: bold;
+    font-weight: normal;
 
     color: #121212;
     background: white;
@@ -166,13 +188,10 @@ mapsection
 }
 .header
 {
-    color:#121212;
     width: 100%;
-    height: 650px;
-    background-image: url("../img/header_start.svg");
+    height: 400px;
+    background-image: url("../img/header.png");
     background-repeat: no-repeat;
-    background-attachment: fixed;
-    background-size: contain;
 }
 /*.berlin
 {
@@ -184,11 +203,11 @@ mapsection
     background-attachment: fixed;
     background-size: contain;
 }*/
-#image
+/*#image
 {
     width: 100%;
     background-attachment: fixed;
-}
+}*/
 .main {
     padding: 30px 0;
 }
@@ -216,7 +235,7 @@ mapsection
     padding: 0px 5% 10px;
 }
 .main aside {
-    background-color: #1B1B1B;
+    background-color: white;
   font-family: 'Palanquin', sans-serif;
   font-size: 0.9em;
   line-height: 1.2em;
@@ -224,7 +243,7 @@ mapsection
     padding: 0px 5% 10px;
 }
 .main aside2 {
-        background-color: #1B1B1B;
+        background-color: white;
   font-family: 'Palanquin', sans-serif;
     font-size: 0.9em;
   line-height: 1.2em;
@@ -232,7 +251,7 @@ mapsection
     padding: 0px 5% 10px;
 }
 .main aside3 {
-        background-color: #1B1B1B;
+        background-color: white;
   font-family: 'Palanquin', sans-serif;
     font-size: 0.9em;
   line-height: 1.2em;
@@ -315,7 +334,6 @@ a.extern:hover {
 
     nav a {
         float: left;
-        width: 25%;
         margin: 0 1.7%;
         padding: 30px 2%;
         margin-bottom: 0;
@@ -374,7 +392,7 @@ a.extern:hover {
 
     nav {
         float: right;
-        width: 38%;
+        width: 35%;
     }
 
 /* ============
