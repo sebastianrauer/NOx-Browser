@@ -11,6 +11,17 @@ a{
     color: #4990E2;
     font-family: 'Palanquin', sans-serif; 
 }
+.gallery > div {
+  position: relative;
+  float: left;
+  padding: 20px;
+}
+
+
+.gallery > div > img {
+  display: inline-block;
+  width: 400px;
+}
 .map
  {
     width: 100%; 

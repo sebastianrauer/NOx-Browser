@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<link href="voronoi/base.css" rel="stylesheet" />
+<link href='https://api.tiles.mapbox.com/mapbox.js/v1.6.3/mapbox.css' rel='stylesheet' />
+<meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+<body>
+  <div id='map'>
+  </div>
+  <div id='selections' class="selections">
+    <a href='#' class="show"></a>
+    <div class='content'>
+      <a href='#' class="hide"></a>
+      <div id="toggles">
+      </div>
+    </div>
+  </div>
+  <div id='loading'>
+  </div>
+  <div id='selected'>
+    <h1>Verteilung aller NO2 Messstationen in Deutschland</h1>
+  </div>
+<!--   <div id='about'>
+    <a href='#' class="show">About</a>
+    <p class='content'>
+      Explore UK supermarkets using a voronoi diagram. Created by <a href="http://chriszetter.com">Chris Zetter</a>, powered by data from <a href="http://www.superlocate.net/">SuperLocate</a>, maps copyright
+      <a href='https://www.mapbox.com/about/maps/' target='_blank'>Mapbox and OpenStreetMap</a>.
+      <a href='#' class="hide">Hide</a>
+    </div> -->
+  </div>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/3.4.8/d3.min.js"></script>
+  <script src="https://api.tiles.mapbox.com/mapbox.js/v2.2.1/mapbox.js"></script>
+  <script src="voronoi/voronoi_lib.js"></script>
+  <script>
+    L.mapbox.accessToken = 'pk.eyJ1IjoicmF1ZXJzZWJhc3RpYW4iLCJhIjoiY2owOXRyemQ0MGFxYTJ3bnlidm11OGsxaiJ9.x5S9zEf7rbi9c_it9cECCw';
+    map = L.mapbox.map('map', 'zetter.i73ka9hn')
+
+
+      .fitBounds([[52.6963610783 , 14.8669449091
+], [50.120578098
+ , 5.6115707159
+]]);
+    url = 'voronoi/june.csv';
+    voronoiMap(map, url);
+  </script>
+</body>
+</html>
