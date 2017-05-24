@@ -14,13 +14,13 @@ a{
 .gallery > div {
   position: relative;
   float: left;
-  padding: 20px;
+  padding: 10px;
 }
 
 
 .gallery > div > img {
   display: inline-block;
-  width: 400px;
+  width: 150px;
 }
 .map
  {
