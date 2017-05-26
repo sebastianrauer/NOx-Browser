@@ -39,11 +39,14 @@ a{
 }
 .urban
 {
+    margin-top: 25px;
+    margin-bottom: 25px;
     color:#121212;
     width: 100%;
-    height: 600px;
-    background-image: url("../img/poster.png");
+    height: 400px;
+    background-image: url("../img/poster_detail.png");
     background-repeat: no-repeat;
+    background-attachment: fixed;
     background-size: contain;
 }
 .start
