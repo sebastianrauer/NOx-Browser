@@ -6,19 +6,20 @@
 
 #map {
 	float: left;
- 	width:74%;
+ 	width:75%;
  	height: 100%;
  	position: fixed;
 }
 #legend {
 	float: right;
-	min-width: 100px;
 	z-index: -100;
- 	width:26%;
+ 	width:25%;
  	height: 100%;
 }
 #d3vis {    
     overflow-x:hidden;
+    overflow-y: hidden;
+    width: 100%;
 }
 h1{
  	position: fixed;
