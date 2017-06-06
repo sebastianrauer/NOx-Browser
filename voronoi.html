@@ -37,14 +37,18 @@
   <script>
     L.mapbox.accessToken = 'pk.eyJ1IjoicmF1ZXJzZWJhc3RpYW4iLCJhIjoiY2owOXRyemQ0MGFxYTJ3bnlidm11OGsxaiJ9.x5S9zEf7rbi9c_it9cECCw';
     map = L.mapbox.map('map', 'zetter.i73ka9hn')
+    
 
 
-      .fitBounds([[52.6963610783 , 14.8669449091
-], [50.120578098
- , 5.6115707159
-]]);
+      .fitBounds([[52.6963610783 , 14.8669449091],
+       [50.120578098, 5.6115707159]]);
     url = 'voronoi/june.csv';
     voronoiMap(map, url);
+    var bounds = [
+    [13.088347, 52.338245], // Southwest coordinates
+    [13.761154, 52.675476]  // Northeast coordinates
+];
+map.scrollWheelZoom.disable();
   </script>
 </body>
 </html>
