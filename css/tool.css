@@ -1,0 +1,66 @@
+#frame{
+	width: 100%;
+	height: 100%;
+	margin: 10px;
+}
+
+#map {
+	float: left;
+ 	width:74%;
+ 	height: 100%;
+ 	position: fixed;
+}
+#legend {
+	float: right;
+	min-width: 100px;
+	z-index: -100;
+ 	width:26%;
+ 	height: 100%;
+}
+#d3vis {    
+    overflow-x:hidden;
+}
+h1{
+ 	position: fixed;
+	z-index: 100;
+	width: 400px;
+	margin-left:20px;
+	margin-top: 20px;
+	margin-right: 20px;
+	color: #121212;
+    font-family: 'Martel';
+    font-size: 2em;
+    line-height: 1.7em;
+}
+h3{
+            font-family: 'Palanquin', sans-serif;
+            font-size: 1.9em;
+            line-height: 1.4em;
+}
+#features {
+	color: #121212;
+    font-family: 'Martel';
+    font-size: 1.5em;
+    line-height: 1.3em;
+    width: 100%;
+    margin-left: 10px;
+    overflow-y: scroll;
+    background-color: white;
+}
+section {
+    padding:  25px 50px;
+    line-height: 25px;
+    border-bottom: 1px solid #ddd;
+    opacity: 0.25;
+    font-size: 13px;
+}
+section p{
+        font-family: 'Palanquin', sans-serif;
+}
+section.active {
+    opacity: 1;
+}
+section:last-child {
+    border-bottom: none;
+    margin-bottom: 200px;
+}
