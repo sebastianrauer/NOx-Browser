@@ -279,7 +279,7 @@ d3.tsv("spielwiese.tsv", function(error, data) {
 
         d3.select("#line-" + d.name.replace(" ", "").replace("/", ""))
           .transition()
-          .style("stroke-width", 2.5);  
+          .style("stroke-width", 1);  
       })
 
       .on("mouseout", function(d){
@@ -291,7 +291,7 @@ d3.tsv("spielwiese.tsv", function(error, data) {
 
         d3.select("#line-" + d.name.replace(" ", "").replace("/", ""))
           .transition()
-          .style("stroke-width", 1.5);
+          .style("stroke-width", 1);
       })
       
   issue.append("text")
