@@ -24,8 +24,13 @@
 mapboxgl.accessToken = 'pk.eyJ1IjoicmF1ZXJzZWJhc3RpYW4iLCJhIjoiY2owOXRyemQ0MGFxYTJ3bnlidm11OGsxaiJ9.x5S9zEf7rbi9c_it9cECCw';
 var map = new mapboxgl.Map({
     container: 'map', // container id
+    maxBounds: bounds // Sets bounds as max
     style: 'mapbox://styles/rauersebastian/cj2rjckwl00192slcvfhc7del', //hosted style id
 });
+var bounds = [
+    [13.088347, 52.338245], // Southwest coordinates
+    [13.761154, 52.675476]  // Northeast coordinates
+];
 
 map.addControl(new MapboxGeocoder({
     accessToken: mapboxgl.accessToken

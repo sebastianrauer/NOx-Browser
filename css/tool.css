@@ -5,21 +5,63 @@
 }
 
 #map {
+    z-index:-1;
 	float: left;
- 	width:75%;
+ 	width:70%;
  	height: 100%;
  	position: fixed;
 }
 #legend {
 	float: right;
-	z-index: -100;
- 	width:25%;
+ 	width:30%;
  	height: 100%;
 }
+#legend-enlarged {
+    position: fixed;
+    width:75%;
+    height: 400px;
+    display: none;
+    background-color: white;
+    -webkit-box-shadow: 0px 0px 52px -16px rgba(0,0,0,0.75);
+    -moz-box-shadow: 0px 0px 52px -16px rgba(0,0,0,0.75);
+    box-shadow: 0px 0px 52px -16px rgba(0,0,0,0.75);
+    padding-left: 30px;
+    padding-right: 30px; 
+}
+
 #d3vis {    
     overflow-x:hidden;
     overflow-y: hidden;
     width: 100%;
+}
+#comparing_button{
+    border: none;
+  -webkit-border-radius: 2;
+  -moz-border-radius: 2;
+  border-radius: 2px;
+font-family: 'Palanquin', sans-serif;
+  color: #4990E2;
+  font-style: bold;
+  font-size: 16px;
+  background: white;
+  text-decoration: none;
+}
+#comparing_button:hover{
+  color: #63A6F3;
+}
+#comparing_button_close{
+     margin-top: 20px;
+     margin-right: 20px;
+     position:absolute;
+          top:0;
+     right:0;
+        border: none;
+font-family: 'Palanquin', sans-serif;
+  color: #4990E2;
+  font-size: 44px;
+  background: white;
+  padding: 10px 20px 10px 20px;
+  text-decoration: none;
 }
 h1{
  	position: fixed;

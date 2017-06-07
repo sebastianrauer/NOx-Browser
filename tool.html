@@ -1,155 +1,231 @@
-<meta charset="UTF-8">
+<!DOCTYPE html>
 
-<link href="https://fonts.googleapis.com/css?family=Martel:600|Palanquin:300" rel="stylesheet">
-<script src='https://api.mapbox.com/mapbox-gl-js/v0.37.0/mapbox-gl.js'></script>
-<script
-  src="https://code.jquery.com/jquery-3.2.1.min.js"
-  integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
-  crossorigin="anonymous"></script>
-<link href='https://api.mapbox.com/mapbox-gl-js/v0.37.0/mapbox-gl.css' rel='stylesheet' />
+<html>
+<head>
+    <meta charset="UTF-8">
+    <link href="https://fonts.googleapis.com/css?family=Martel:600|Palanquin:300" rel="stylesheet">
+    <script src='https://api.mapbox.com/mapbox-gl-js/v0.37.0/mapbox-gl.js'>
+    </script>
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js">
+    </script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js">
+    </script>
+    <link href='https://api.mapbox.com/mapbox-gl-js/v0.37.0/mapbox-gl.css' rel='stylesheet'>
     <link href="css/tool.css" rel="stylesheet">
 
+    <title>
+    </title>
+</head>
 
-<div id="frame">
-    <div id='map'>
-        		<h1>NOx Werte aus dem Jahr 2016 an ausgewählten Messstationen in Hamburg, Berlin und Stuttgart</h1>
+<body>
+    <div id="frame">
+        <div id="legend-enlarged">
+            <button id="comparing_button_close">X</button>
+
+            <h3>Amrumer Straße, Berlin</h3>
+            <iframe frameborder="0" height="280px" id="d3vis" name="d3vis" src="d3_chart_amrumer.html"></iframe>
+        </div>
+
+
+        <div id='map'>
+            <h1>NOx Werte aus dem Jahr 2016 an ausgewählten Messstationen in Hamburg, Berlin und Stuttgart</h1>
+        </div>
+
+
+        <div id='legend'>
+            <div id="selected">
+                <div id='features'>
+                    <section class='active' id='amrumer'>
+                        <h3>Amrumer Straße, Berlin</h3>
+
+
+                        <p>Im Berliner Bezirk Wedding gelegende Straße mit einer Länge von 563.80 m und vier Fahrstreifen + auf einem Parkstreifen auf jeder Seite. In dieser
+                        Straße befinden sich das Deutsche Herzzentrum Berlin auf dem Gelände des Charité Campus Virchow-Klinikums. Der höchste NO<sub>2</sub>-Messwert im
+                        Ein-Stunden-Tagesmixima im Jahr 2016 betrug 116g/m<sup>3</sup> und wurde am 4. April erreicht.</p>
+                        <button id="comparing_button">Daten im Jahresverlauf</button>
+                    </section>
+
+
+                    <section id='aldgate'>
+                        <h3>Aldgate Station</h3>
+
+
+                        <p>Arthur Cadogan West was found dead, head crushed in on train tracks at Aldgate Station at 6AM Tuesday morning. West worked at Woolwich Arsenal on the
+                        Bruce-Partington submarine, a secret military project. Plans for the submarine had been stolen and seven of the ten missing papers were found in West's
+                        possession. Mycroft implores Sherlock to take the case and recover the three missing papers.</p>
+                    </section>
+
+
+                    <section id='london-bridge'>
+                        <h3>London Bridge</h3>
+
+
+                        <p>Holmes and Watson's investigations take them across London. Sherlock deduces that West was murdered elsewhere, then moved to Aldgate Station to create
+                        the illusion that he was crushed on the tracks by a train. On their way to Woolwich Sherlock dispatches a telegram to Mycroft at London Bridge: "Send
+                        list of all foreign spies known to be in England, with full address."</p>
+                    </section>
+
+
+                    <section id='woolwich'>
+                        <h3>Woolwich Arsenal</h3>
+
+
+                        <p>While investigating at Woolwich Arsenal Sherlock learns that West did not have the three keys&mdash;door, office, and safe&mdash;necessary to steal
+                        the papers. The train station clerk mentions seeing an agitated West boarding the 8:15 train to London Bridge. Sherlock suspects West of following
+                        someone who had access to the Woolwich chief's keyring with all three keys.</p>
+                    </section>
+
+
+                    <section id='gloucester'>
+                        <h3>Gloucester Road</h3>
+
+
+                        <p>Mycroft responds to Sherlock's telegram and mentions several spies. Hugo Oberstein of 13 Caulfield Gardens catches Sherlock's eye. He heads to the
+                        nearby Gloucester Road station to investigate and learns that the windows of Caulfield Gardens open over rail tracks where trains stop frequently.</p>
+                    </section>
+
+
+                    <section id='caulfield-gardens'>
+                        <h3>13 Caulfield Gardens</h3>
+
+
+                        <p>Holmes deduces that the murderer placed West atop a stopped train at Caulfield Gardens. The train traveled to Aldgate Station before West's body
+                        finally toppled off. Backtracking to the criminal's apartment, Holmes finds a series of classified ads from <em>The Daily Telegraph</em> stashed away.
+                        All are under the name Pierrot: "Monday night after nine. Two taps. Only ourselves. Do not be so suspicious. Payment in hard cash when goods
+                        delivered."</p>
+                    </section>
+
+
+                    <section id='telegraph'>
+                        <h3>The Daily Telegraph</h3>
+
+
+                        <p>Holmes and Watson head to The Daily Telegraph and place an ad to draw out the criminal. It reads: "To-night. Same hour. Same place. Two taps. Most
+                        vitally important. Your own safety at stake. Pierrot." The trap works and Holmes catches the criminal: Colonel Valentine Walter, the brother of Woolwich
+                        Arsenal's chief. He confesses to working for Hugo Oberstein to obtain the submarine plans in order to pay off his debts.</p>
+                    </section>
+
+
+                    <section id='charing-cross'>
+                        <h3>Charing Cross Hotel</h3>
+
+
+                        <p>Walter writes to Oberstein and convinces him to meet in the smoking room of the Charing Cross Hotel where he promises additional plans for the
+                        submarine in exchange for money. The plan works and Holmes and Watson catch both criminals.</p>
+                        <small id="citation">Adapted from <a href='http://www.gutenberg.org/files/2346/2346-h/2346-h.htm'>Project Gutenberg</a></small>
+                    </section>
+                </div>
+            </div>
+        </div>
     </div>
-    <div id='legend'>
-    	<div id="selected">
-    		<div id='features'>
-    <section id='baker' class='active'>
-        <h3>221b Baker St.</h3>
-        <p>November 1895. London is shrouded in fog and Sherlock Holmes and Watson pass time restlessly awaiting a new case. "The London criminal is certainly a dull fellow," Sherlock bemoans. "There have been numerous petty thefts," Watson offers in response. Just then a telegram arrives from Sherlock's brother Mycroft with a mysterious case.</p>
-         <iframe id="d3vis" src="d3_chart_amrumer.html" height="280px" frameBorder="0"></iframe>
-    </section>
-    <section id='aldgate'>
-        <h3>Aldgate Station</h3>
-        <p>Arthur Cadogan West was found dead, head crushed in on train tracks at Aldgate Station at 6AM Tuesday morning. West worked at Woolwich Arsenal on the Bruce-Partington submarine, a secret military project. Plans for the submarine had been stolen and seven of the ten missing papers were found in West's possession. Mycroft implores Sherlock to take the case and recover the three missing papers.</p>
-    </section>
-    <section id='london-bridge'>
-        <h3>London Bridge</h3>
-        <p>Holmes and Watson's investigations take them across London. Sherlock deduces that West was murdered elsewhere, then moved to Aldgate Station to create the illusion that he was crushed on the tracks by a train. On their way to Woolwich Sherlock dispatches a telegram to Mycroft at London Bridge: "Send list of all foreign spies known to be in England, with full address."</p>
-    </section>
-    <section id='woolwich'>
-        <h3>Woolwich Arsenal</h3>
-        <p>While investigating at Woolwich Arsenal Sherlock learns that West did not have the three keys&mdash;door, office, and safe&mdash;necessary to steal the papers. The train station clerk mentions seeing an agitated West boarding the 8:15 train to London Bridge. Sherlock suspects West of following someone who had access to the Woolwich chief's keyring with all three keys.</p>
-    </section>
-    <section id='gloucester'>
-        <h3>Gloucester Road</h3>
-        <p>Mycroft responds to Sherlock's telegram and mentions several spies. Hugo Oberstein of 13 Caulfield Gardens catches Sherlock's eye. He heads to the nearby Gloucester Road station to investigate and learns that the windows of Caulfield Gardens open over rail tracks where trains stop frequently.</p>
-    </section>
-    <section id='caulfield-gardens'>
-        <h3>13 Caulfield Gardens</h3>
-        <p>Holmes deduces that the murderer placed West atop a stopped train at Caulfield Gardens. The train traveled to Aldgate Station before West's body finally toppled off. Backtracking to the criminal's apartment, Holmes finds a series of classified ads from <em>The Daily Telegraph</em> stashed away. All are under the name Pierrot: "Monday night after nine. Two taps. Only ourselves. Do not be so suspicious. Payment in hard cash when goods delivered."</p>
-    </section>
-    <section id='telegraph'>
-        <h3>The Daily Telegraph</h3>
-        <p>Holmes and Watson head to The Daily Telegraph and place an ad to draw out the criminal. It reads: "To-night. Same hour. Same place. Two taps. Most vitally important. Your own safety at stake. Pierrot." The trap works and Holmes catches the criminal: Colonel Valentine Walter, the brother of Woolwich Arsenal's chief. He confesses to working for Hugo Oberstein to obtain the submarine plans in order to pay off his debts.</p>
-    </section>
-    <section id='charing-cross'>
-        <h3>Charing Cross Hotel</h3>
-        <p>Walter writes to Oberstein and convinces him to meet in the smoking room of the Charing Cross Hotel where he promises additional plans for the submarine in exchange for money. The plan works and Holmes and Watson catch both criminals.</p>
-        <small id="citation">
-            Adapted from <a href='http://www.gutenberg.org/files/2346/2346-h/2346-h.htm'>Project Gutenberg</a>
-        </small>
-    </section>
-</div>    	
-</div>
-    </div>
-</div>
-<script>
-mapboxgl.accessToken = 'pk.eyJ1IjoicmF1ZXJzZWJhc3RpYW4iLCJhIjoiY2owOXRyemQ0MGFxYTJ3bnlidm11OGsxaiJ9.x5S9zEf7rbi9c_it9cECCw';
+    <script>
+    mapboxgl.accessToken = 'pk.eyJ1IjoicmF1ZXJzZWJhc3RpYW4iLCJhIjoiY2owOXRyemQ0MGFxYTJ3bnlidm11OGsxaiJ9.x5S9zEf7rbi9c_it9cECCw';
 
-var map = new mapboxgl.Map({
-    container: 'map',
-    style: 'mapbox://styles/mapbox/streets-v9',
-    center: [13.398515, 52.525362],
-    zoom: 12,
-    bearing: 27,
-    pitch: 45
-});
-map.scrollZoom.disable();
+    var map = new mapboxgl.Map({
+       container: 'map',
+       style: 'mapbox://styles/rauersebastian/cj2rjckwl00192slcvfhc7del',
+       center: [13.398515, 52.525362],
+       zoom: 12,
+       bearing: 27,
+       pitch: 45
+    });
+    map.scrollZoom.disable();
 
-var chapters = {
-    'baker': {
-        bearing: 27,
-        center: [-0.15591514, 51.51830379],
-        zoom: 15.5,
-        pitch: 20
-    },
-    'aldgate': {
-        duration: 6000,
-        center: [-0.07571203, 51.51424049],
-        bearing: 150,
-        zoom: 15,
-        pitch: 0
-    },
-    'london-bridge': {
-        bearing: 90,
-        center: [-0.08533793, 51.50438536],
-        zoom: 13,
-        speed: 0.6,
-        pitch: 40
-    },
-    'woolwich': {
-        bearing: 90,
-        center: [0.05991101, 51.48752939],
-        zoom: 12.3
-    },
-    'gloucester': {
-        bearing: 45,
-        center: [-0.18335806, 51.49439521],
-        zoom: 15.3,
-        pitch: 20,
-        speed: 0.5
-    },
-    'caulfield-gardens': {
-        bearing: 180,
-        center: [-0.19684993, 51.5033856],
-        zoom: 12.3
-    },
-    'telegraph': {
-        bearing: 90,
-        center: [-0.10669358, 51.51433123],
-        zoom: 17.3,
-        pitch: 40
-    },
-    'charing-cross': {
-        bearing: 90,
-        center: [-0.12416858, 51.50779757],
-        zoom: 14.3,
-        pitch: 20
+    var chapters = {
+       'amrumer': {
+           bearing: 27,
+           center: [13.347124, 52.543933],
+           zoom: 14,
+           pitch: 45
+       },
+       'aldgate': {
+           duration: 1000,
+           center: [-0.07571203, 51.51424049],
+           bearing: 150,
+           zoom: 15,
+           pitch: 0
+       },
+       'london-bridge': {
+           bearing: 90,
+           center: [-0.08533793, 51.50438536],
+           zoom: 13,
+           speed: 0.6,
+           pitch: 40
+       },
+       'woolwich': {
+           bearing: 90,
+           center: [0.05991101, 51.48752939],
+           zoom: 12.3
+       },
+       'gloucester': {
+           bearing: 45,
+           center: [-0.18335806, 51.49439521],
+           zoom: 15.3,
+           pitch: 20,
+           speed: 0.5
+       },
+       'caulfield-gardens': {
+           bearing: 180,
+           center: [-0.19684993, 51.5033856],
+           zoom: 12.3
+       },
+       'telegraph': {
+           bearing: 90,
+           center: [-0.10669358, 51.51433123],
+           zoom: 17.3,
+           pitch: 40
+       },
+       'charing-cross': {
+           bearing: 90,
+           center: [-0.12416858, 51.50779757],
+           zoom: 14.3,
+           pitch: 20
+       }
+    };
+
+    // On every scroll event, check which element is on screen
+    window.onscroll = function() {
+       var chapterNames = Object.keys(chapters);
+       for (var i = 0; i < chapterNames.length; i++) {
+           var chapterName = chapterNames[i];
+           if (isElementOnScreen(chapterName)) {
+               setActiveChapter(chapterName);
+               break;
+           }
+       }
+    };
+
+    var activeChapterName = '';
+    function setActiveChapter(chapterName) {
+       if (chapterName === activeChapterName) return;
+
+       map.flyTo(chapters[chapterName]);
+
+       document.getElementById(chapterName).setAttribute('class', 'active');
+       document.getElementById(activeChapterName).setAttribute('class', 'amrumer');
+
+       activeChapterName = chapterName;
     }
-};
 
-// On every scroll event, check which element is on screen
-window.onscroll = function() {
-    var chapterNames = Object.keys(chapters);
-    for (var i = 0; i < chapterNames.length; i++) {
-        var chapterName = chapterNames[i];
-        if (isElementOnScreen(chapterName)) {
-            setActiveChapter(chapterName);
-            break;
-        }
+    function isElementOnScreen(id) {
+       var element = document.getElementById(id);
+       var bounds = element.getBoundingClientRect();
+       return bounds.top < window.innerHeight && bounds.bottom > 0;
     }
-};
 
-var activeChapterName = 'baker';
-function setActiveChapter(chapterName) {
-    if (chapterName === activeChapterName) return;
+    </script> 
+    <script>
 
-    map.flyTo(chapters[chapterName]);
-
-    document.getElementById(chapterName).setAttribute('class', 'active');
-    document.getElementById(activeChapterName).setAttribute('class', '');
-
-    activeChapterName = chapterName;
-}
-
-function isElementOnScreen(id) {
-    var element = document.getElementById(id);
-    var bounds = element.getBoundingClientRect();
-    return bounds.top < window.innerHeight && bounds.bottom > 0;
-}
-
-</script>
+    $(document).ready(function(){
+       $("#comparing_button").click(function(){
+           $("#legend-enlarged").animate({'height': 'toggle'});
+        });
+    });
+    $(document).ready(function(){
+       $("#comparing_button_close").click(function(){
+           $("#legend-enlarged").animate({'height': 'toggle'});
+       });
+    });
+    </script>
+</body>
+</html>

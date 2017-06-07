@@ -1,8 +1,7 @@
 <!DOCTYPE html>
-<svg width="1024" height="250"></svg>
+<svg width="960" height="250"></svg>
 <script src="https://d3js.org/d3.v4.min.js"></script>
 <script>
-
 
 var svg = d3.select("svg"),
     margin = {top: 0, right: 0, bottom: 20, left: 25},
@@ -22,7 +21,7 @@ var line = d3.line()
     .x(function(d) { return x(d.date); })
     .y(function(d) { return y(d.close); });
 
-d3.tsv("d3data/amrumer.tsv", function(d) {
+d3.tsv("d3data/belziger.tsv", function(d) {
   d.date = parseTime(d.date);
   d.close = +d.close;
   return d;
@@ -41,32 +40,12 @@ d3.tsv("d3data/amrumer.tsv", function(d) {
   g.append("g")
       .call(d3.axisLeft(y))
     .append("text")
-      .attr("fill", "#000")
+      .attr("fill", "none")
       .attr("transform", "rotate(-90)")
       .attr("y", 6)
       .attr("dy", "0.9em")
       .attr("text-anchor", "end")
       .text("NO2");
-
-  g.append("path")
-      .datum(data)
-      .attr("fill", "none")
-      .attr("stroke", "steelblue")
-      .attr("stroke-linejoin", "round")
-      .attr("stroke-linecap", "round")
-      .attr("stroke-width", 1)
-      .attr("d", line);
-});
-d3.tsv("d3data/belziger.tsv", function(d) {
-  d.date = parseTime(d.date);
-  d.close = +d.close;
-  return d;
-}, function(error, data) {
-  if (error) throw error;
-
-  x.domain(d3.extent(data, function(d) { return d.date; }));
-  y.domain(d3.extent(data, function(d) { return d.close; }));
-
 
   g.append("path")
       .datum(data)
@@ -77,6 +56,5 @@ d3.tsv("d3data/belziger.tsv", function(d) {
       .attr("stroke-width", 1)
       .attr("d", line);
 });
-
 
 </script>
