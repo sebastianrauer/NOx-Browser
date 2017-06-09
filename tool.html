@@ -22,13 +22,15 @@
         <div id="legend-enlarged">
             <button id="comparing_button_close">X</button>
 
-            <h3>Amrumer Straße, Berlin</h3>
-            <iframe frameborder="0" height="280px" id="d3vis" name="d3vis" src="d3_chart_amrumer.html"></iframe>
+            <h3>Vergleiche die Werte aller Stationen in Berlin</h3>
+            <iframe frameborder="0" height="800px" id="d3vis" name="d3vis" src="data_comparison.html"></iframe>
         </div>
 
 
         <div id='map'>
-            <h1>NOx Werte aus dem Jahr 2016 an ausgewählten Messstationen in Hamburg, Berlin und Stuttgart</h1>
+            <h1>Stickstoffdioxid in Berlin <br>2016</h1>
+            <button id="comparing_button">Messdaten im Jahresverlauf</button>
+
         </div>
 
 
@@ -37,82 +39,134 @@
                 <div id='features'>
                     <section class='active' id='amrumer'>
                         <h3>Amrumer Straße, Berlin</h3>
+                                                <div id="indicator_amrumer"></div><br>
+                        
+                        <p style="margin-top: 5px; font-size: 16px;">Höchster Wert: 116 μg/m<sup>3</sup> am 4. April 2016</p>
 
-
-                        <p>Im Berliner Bezirk Wedding gelegende Straße mit einer Länge von 563.80 m und vier Fahrstreifen + auf einem Parkstreifen auf jeder Seite. In dieser
-                        Straße befinden sich das Deutsche Herzzentrum Berlin auf dem Gelände des Charité Campus Virchow-Klinikums. Der höchste NO<sub>2</sub>-Messwert im
-                        Ein-Stunden-Tagesmixima im Jahr 2016 betrug 116g/m<sup>3</sup> und wurde am 4. April erreicht.</p>
-                        <button id="comparing_button">Daten im Jahresverlauf</button>
+                        <p>Im Bezirk Wedding gelegene Straße mit einer Länge von 564 m. Die Amrumer Straße hat vier Fahrstreifen in beide Richtungen und jeweils ein Parkstreifen auf jeder Seite. In dieser Straße befindet sich das Deutsche Herzzentrum Berlin auf dem Gelände des Charité Campus Virchow-Klinikums.</p> 
+                                                
                     </section>
 
 
-                    <section id='aldgate'>
-                        <h3>Aldgate Station</h3>
+                    <section id='belziger'>
+                        <h3>Belziger Straße</h3>
+                        
+                        <div id="indicator_belziger"></div><br>
+                        
+                        <p style="margin-top: 5px;font-size: 16px">Höchster Wert: 126 μg/m<sup>3</sup> am 2. September 2016</p>
 
-
-                        <p>Arthur Cadogan West was found dead, head crushed in on train tracks at Aldgate Station at 6AM Tuesday morning. West worked at Woolwich Arsenal on the
-                        Bruce-Partington submarine, a secret military project. Plans for the submarine had been stolen and seven of the ten missing papers were found in West's
-                        possession. Mycroft implores Sherlock to take the case and recover the three missing papers.</p>
+                        <p>An der Belziger Straße, die ihren Namen 1884 nach der brandenburgischen Kreisstadt am Fläming erhielt, lässt sich das Auf und Ab eines ganzen Kiezes ablesen, die Gleichzeitigkeit verschiedener Entwicklungsprozesse.<br> Am unteren Ende, wo sie vis-à-vis vom Rathaus Schöneberg auf die Martin-Luther-Straße stößt, macht sich immer noch der Wegzug des Abgeordnetenhauses bemerkbar, denn plötzlich fehlten Politiker und Beamte als Restaurantbesucher, Kunden der Wäscherei. Abstieg West en miniature. Nur das „Narkosestübchen“, das mit Rauchererlaubnis ködert, hat Konjunktur.
+                        <br><a href="http://www.tagesspiegel.de/berlin/stadtleben/berliner-lebensadern-18-belziger-strasse-willkommen-im-narkosestuebchen/1958114.html" target="_blank">Quelle</a></p>
                     </section>
 
 
-                    <section id='london-bridge'>
-                        <h3>London Bridge</h3>
-
-
-                        <p>Holmes and Watson's investigations take them across London. Sherlock deduces that West was murdered elsewhere, then moved to Aldgate Station to create
-                        the illusion that he was crushed on the tracks by a train. On their way to Woolwich Sherlock dispatches a telegram to Mycroft at London Bridge: "Send
-                        list of all foreign spies known to be in England, with full address."</p>
+                    <section id='bruecken'>
+                        <h3>Brückenstraße</h3>
+                        <div id="indicator_bruecken"></div><br>
+                        <p style="margin-top: 5px;font-size: 16px">Höchster Wert: 132 μg/m<sup>3</sup> am 2. September 2016</p>
+                        <p>Im Wohnzimmer dröhnen die Autos, im Schlafzimmer dröhnen die Autos, in der Küche dröhnen die Autos. Unter dem Haus bewegt sich die U-Bahn. Sie treibt eine leichtes Beben in die Couchgarnitur bei Missalls und bringt in David Plonskys Anbauwand die Gläser zum Klirren. Die Baustellen kreischen, vom Bahnhof Jannowitzbrücke summt die S-Bahn, und an den Wochenenden wummern aus den Boxen des nahegelegenen "Boogaloo" die Bässe in die Schlafzimmer der Mieter des Hauses 1a.
+                        <br><a href="http://www.berliner-zeitung.de/dreissigtausend-autos-fahren-taeglich-durch-die-schmale-brueckenstrasse-in-berlin-mitte--es-gibt-dreck--gift--krach--und-ein-paar-anwohner--ansonsten--wo-soll-man-hin---17270148" target="_blank">Quelle</a></p>
                     </section>
 
 
-                    <section id='woolwich'>
-                        <h3>Woolwich Arsenal</h3>
-
-
-                        <p>While investigating at Woolwich Arsenal Sherlock learns that West did not have the three keys&mdash;door, office, and safe&mdash;necessary to steal
-                        the papers. The train station clerk mentions seeing an agitated West boarding the 8:15 train to London Bridge. Sherlock suspects West of following
-                        someone who had access to the Woolwich chief's keyring with all three keys.</p>
+                    <section id='buch'>
+                        <h3>Buch</h3>
+                        <div id="indicator_buch"></div><br>
+                        <p style="margin-top: 5px;font-size: 16px">Höchster Wert: 64 μg/m<sup>3</sup> am 14. November 2016</p>
+                        <p>Als Gesundheitsstandort Berlin betitelt ist Buch der nördlichste Ortsteil des Bezirks Pankow und damit von Berlin. Den an der Panke liegenden Ort prägen der historische Dorfkern, der Schlosspark, umfassende Krankenhaus-Anlagen und modernere Neubausiedlungen. Hauptzufahrtsstraße zum Ortsteil ist die Wiltbergstraße. Über Alt-Buch und Zepernicker Straße bzw. Schwanebecker Chaussee sind die angrenzenden Vororte erreichbar.
+                        <br><a href="https://de.wikipedia.org/wiki/Berlin-Buch#Verkehr" target="_blank">Quelle</a></p>
                     </section>
 
 
-                    <section id='gloucester'>
-                        <h3>Gloucester Road</h3>
-
-
-                        <p>Mycroft responds to Sherlock's telegram and mentions several spies. Hugo Oberstein of 13 Caulfield Gardens catches Sherlock's eye. He heads to the
-                        nearby Gloucester Road station to investigate and learns that the windows of Caulfield Gardens open over rail tracks where trains stop frequently.</p>
+                    <section id='frankfurter'>
+                        <h3>Frankfurter Allee</h3>
+                        <div id="indicator_frankfurter"></div><br>
+                        <p style="margin-top: 5px;font-size: 16px">Höchster Wert: 137 μg/m<sup>3</sup> am 17. März 2016</p>
+                        <p>Die Frankfurter Allee ist einer der ältesten Verkehrswege von Berlin. Sie ist die Verlängerung der Karl-Marx-Allee in Richtung Frankfurt (Oder), Teil der wichtigen Bundesstraßen 1 (die ehemalige Reichsstraße 1) und 5 und hat eine Länge von 3,6 Kilometern. Sie ist die Hauptschlagader der City Ost und muss 50.000 Fahrzeuge täglich verkraften.
+                        <br><a href="http://www.bz-berlin.de/berlin/friedrichshain-kreuzberg/zusaetzlicher-radstreifen-und-tempo-30-auf-frankfurter-allee" target="_blank">Quelle</a></p>
                     </section>
 
 
-                    <section id='caulfield-gardens'>
-                        <h3>13 Caulfield Gardens</h3>
-
-
-                        <p>Holmes deduces that the murderer placed West atop a stopped train at Caulfield Gardens. The train traveled to Aldgate Station before West's body
-                        finally toppled off. Backtracking to the criminal's apartment, Holmes finds a series of classified ads from <em>The Daily Telegraph</em> stashed away.
-                        All are under the name Pierrot: "Monday night after nine. Two taps. Only ourselves. Do not be so suspicious. Payment in hard cash when goods
-                        delivered."</p>
+                    <section id='frohnau'>
+                        <h3>Frohnau</h3>
+                        <div id="indicator_frohnau"></div><br>
+                        <p style="margin-top: 5px;font-size: 16px">Höchster Wert: 55 μg/m<sup>3</sup> am 20. Januar 2016</p>
+                        <p>Der Garten der Hauptstadt. Frohnau ist nicht aus einem Dorf oder aus einer alten Siedlung hervorgegangen, sondern wurde am Anfang des 20. Jahrhunderts von zwei Professoren als Gartenstadt geplant. Im Zentrum liegt die Station einer S-Bahn-Linie, die den Vorort mit dem Zentrum verbindet. Östlich und westlich der Station befinden sich zwei Plätze, um die, wie man sagt, das Leben der Einwohner kreist. Hier sind die Geschäfte, gemütliche Restaurants und Cafés, Apotheken, eine Post, Banken und die Evangelische Kirche.
+                        <br><a href="http://www.frohnau-berlin.de/" target="_blank">Quelle</a></p>
                     </section>
 
 
-                    <section id='telegraph'>
-                        <h3>The Daily Telegraph</h3>
-
-
-                        <p>Holmes and Watson head to The Daily Telegraph and place an ad to draw out the criminal. It reads: "To-night. Same hour. Same place. Two taps. Most
-                        vitally important. Your own safety at stake. Pierrot." The trap works and Holmes catches the criminal: Colonel Valentine Walter, the brother of Woolwich
-                        Arsenal's chief. He confesses to working for Hugo Oberstein to obtain the submarine plans in order to pay off his debts.</p>
+                    <section id='grunewald'>
+                        <h3>Grunewaldstraße</h3>
+                        <div id="indicator_grunewald"></div><br>
+                        <p style="margin-top: 5px;font-size: 16px">Höchster Wert: 76 μg/m<sup>3</sup> am 26. August 2016</p>
+                        <p>Die Grunewaldstraße im Berliner Ortsteil Steglitz (Bezirk Steglitz-Zehlendorf) verläuft beginnend an der Schloßstraße in Richtung Grunewald bis zur damaligen Grenze der Gemarkungen Steglitz/Dahlem und geht an der Einmündung der Zeunepromenade in die Königin-Luise-Straße über. Die ersten Hausnummern bis zur Nummer 3 gehören zum Einkaufszentrum Das Schloss. Das „alte“ Rathaus Steglitz von 1898 wurde davon umfasst und dessen Innenhof in den Neubau integriert.
+                        <br><a href="https://de.wikipedia.org/wiki/Grunewaldstraße" target="_blank">Quelle</a></p>
                     </section>
 
 
-                    <section id='charing-cross'>
-                        <h3>Charing Cross Hotel</h3>
+                    <section id='hardenberg'>
+                        <h3>Hardenbergplatz</h3>
+                        <div id="indicator_hardenberg"></div><br>
+                        <p style="margin-top: 5px;font-size: 16px">Höchster Wert: 268 μg/m<sup>3</sup> am 7. September 2016</p>
+                        <p>Der Platz entstand im Jahr 1958, als der zwischen Hertzallee und Hardenbergstraße befindliche Teil der Joachimsthaler Straße in Hardenbergplatz umbenannt und zu einem solchen umgebaut wurde. Der Platz ist einer der zentralen Punkte für den öffentlichen Personennahverkehr der Stadt. So beginnen, enden und verkehren an den sechs Haltebuchten die wichtigsten Buslinien der BVG und im angeschlossenen Bahnhof Zoologischer Garten verkehren viele S Bahn-, Regionalbahn- und U Bahnlinien.
+                        <br><a href="https://de.wikipedia.org/wiki/Hardenbergplatz" target="_blank">Quelle</a></p>
+                    </section>
 
 
-                        <p>Walter writes to Oberstein and convinces him to meet in the smoking room of the Charing Cross Hotel where he promises additional plans for the
-                        submarine in exchange for money. The plan works and Holmes and Watson catch both criminals.</p>
-                        <small id="citation">Adapted from <a href='http://www.gutenberg.org/files/2346/2346-h/2346-h.htm'>Project Gutenberg</a></small>
+                    <section id='karlmarx'>
+                        <h3>Karl-Marx-Allee</h3>
+                        <div id="indicator_karlmarx"></div><br>
+                        <p style="margin-top: 5px;font-size: 16px">Höchster Wert: 157 μg/m<sup>3</sup> am 16. September 2016</p>
+                        <p>Die Karl-Marx-Allee beginnt in der Nähe des Fernsehturms am Alexanderplatz, reicht knapp drei Kilometer bis nach Friedrichshain und macht sich mit 90 Metern breiter als die Champs-Élysées. 
+Als Stalinallee Anfang der fünfziger Jahre im sowjetischen Zuckerbäckerstil erbaut, sollte Deutschlands erste sozialistische Hauptstraße den Rest der Welt beeindrucken. Heute werden die Wohnungen von Jahr zu Jahr begehrter: für Galeristen, Maler, Musiker, Leute mit Geld, denen die Mietpreise nichts ausmachen und die es sich leisten können, in den neuen Geschäften einzukaufen, die an der Allee entstanden sind.
+
+                        <br><a href="http://www.zeit.de/kultur/karl-marx-allee/index.html#chapter-04" target="_blank">Quelle</a></p>
+                    </section>
+
+                    <section id='karlshorst'>
+                        <h3>Karlshorst</h3>
+                        <div id="indicator_karlshorst"></div><br>
+                        <p style="margin-top: 5px;font-size: 16px">Höchster Wert: 94 μg/m<sup>3</sup> am 23. September 2016</p>
+                        <p>Karlshorst ist mit dem öffentlichen Personennahverkehr am besten über die S-Bahn-Linie S 3 zu erreichen. Der nach dem Stadtteil benannte Bahnhof liegt ungefähr auf halber Strecke der Bahn, die von Erkner am äußersten östlichen Rand Berlins bis zum Ostbahnhof verkehrt. Für den Individualverkehr sind vor allem die beiden Hauptverkehrsadern Treskow- und Waldowallee von Bedeutung, die Karlshorst mit dem Berliner Straßennetz verbinden. Desweiteren ist der Stadtteil hervorragend an das Straßenbahnnetz angeschlossen.
+                        <br><a href="https://www.immobilienscout24.de/wohnen/berlin,berlin,karlshorst-lichtenberg.html" target="_blank">Quelle</a></p>
+                    </section>
+
+                    <section id='mariendorfer'>
+                        <h3>Mariendorfer Damm</h3>
+                        <div id="indicator_mariendorfer"></div><br>
+                        <p style="margin-top: 5px;font-size: 16px">Höchster Wert: 115 μg/m<sup>3</sup> am 16. September 2016</p>
+                        <p>Der Mariendorfer Damm (umgangssprachlich Ma-Damm genannt) ist ein Teil der Bundesstraße 96 und eine wichtige in Nord-Süd-Richtung verlaufende Ein- und Ausfallstraße in Berlin. Sie ist nach dem gleichnamigen Ortsteil Mariendorf im Bezirk Tempelhof-Schöneberg benannt.
+                        <br><a href="https://de.wikipedia.org/wiki/Mariendorfer_Damm" target="_blank">Quelle</a></p>
+                    </section>
+
+                    <section id='nansen'>
+                        <h3>Nansenstraße</h3>
+                        <div id="indicator_nansen"></div><br>
+                        <p style="margin-top: 5px;font-size: 16px">Höchster Wert: 116 μg/m<sup>3</sup> am 4. April 2016</p>
+                        <p>Die Nansenstraße in Berlin Neukölln ist eine 430 m lange Kopfsteinpflasterstraße und verbindet das Maybachufer mit der Weserstraße. Eine Spur pro Richtung und Parkstreifen auf beiden Seiten.
+                        <br><a href="http://www.frohnau-berlin.de/" target="_blank">Quelle</a></p>
+                    </section>
+
+                    <section id='schildhorn'>
+                        <h3>Schildhornstraße</h3>
+                        <div id="indicator_schildhorn"></div><br>
+                        <p style="margin-top: 5px;font-size: 16px">Höchster Wert: 156 μg/m<sup>3</sup> am 26. August 2016</p>
+                        <p>Von der A 100 aus sind lediglich die Richtungen Mecklenburgische Straße und Schmargendorf ausgeschildert. Ein Hinweis auf Steglitz fehlt. Dies ist Absicht, um so wenig Verkehr wie möglich auf die Schildhornstraße zu leiten, die eine der am stärksten mit Feinstaub belasteten Straßen Berlins ist. Folgt man nach Verlassen der A 104 dem Straßenverlauf der Schildhornstraße nach Südosten, dann kreuzt man die Schloßstraße direkt am „Bierpinsel“ und erreicht die A 103 an der Abfahrt Filandastraße.
+                        <br><a href="https://de.wikipedia.org/wiki/Bundesautobahn_104" target="_blank">Quelle</a></p>
+                    </section>
+
+                    <section id='silberstein'>
+                        <h3>Silbersteintraße</h3>
+                        <div id="indicator_silberstein"></div><br>
+                        <p style="margin-top: 5px;font-size: 16px">Höchster Wert: 216 μg/m<sup>3</sup> am 24. Juni 2016</p>
+                        <p>Die Silbersteinstraße ist sehr stark befahren. Ihr Verlauf in Ost-West-Richtung ist auch nicht optimal. Bei Wetterlagen mit Ostwind wird Staub aus Polnischen Kraftwerken über die Grenzen geweht. Weil die Silbersteinstraße leicht abschüssig ist, sammelt sich dann ihrer niedrigsten Stelle – der Ecke Karl Marx – der Feinstaub.
+                        <br><a href="http://www.deutschlandfunkkultur.de/silbersteinstrasse-in-berlin-neukoelln-dicke-luft-die.1001.de.html?dram:article_id=345143" target="_blank">Quelle</a></p>
+                    </section>
+                    <section id='silberstein'>
+                        <h3></h3>
+                        <div id="last-section"></div>
+                        <p>
                     </section>
                 </div>
             </div>
@@ -138,44 +192,80 @@
            zoom: 14,
            pitch: 45
        },
-       'aldgate': {
+       'belziger': {
            duration: 1000,
            center: [-0.07571203, 51.51424049],
            bearing: 150,
            zoom: 15,
            pitch: 0
        },
-       'london-bridge': {
+       'bruecken': {
            bearing: 90,
            center: [-0.08533793, 51.50438536],
            zoom: 13,
            speed: 0.6,
            pitch: 40
        },
-       'woolwich': {
+       'buch': {
            bearing: 90,
            center: [0.05991101, 51.48752939],
            zoom: 12.3
        },
-       'gloucester': {
+       'frankfurter': {
            bearing: 45,
            center: [-0.18335806, 51.49439521],
            zoom: 15.3,
            pitch: 20,
            speed: 0.5
        },
-       'caulfield-gardens': {
+       'frohnau': {
            bearing: 180,
            center: [-0.19684993, 51.5033856],
            zoom: 12.3
        },
-       'telegraph': {
+       'grunewald': {
            bearing: 90,
            center: [-0.10669358, 51.51433123],
            zoom: 17.3,
            pitch: 40
        },
-       'charing-cross': {
+       'hardenberg': {
+           bearing: 90,
+           center: [-0.12416858, 51.50779757],
+           zoom: 14.3,
+           pitch: 20
+       },
+          'karlmarx': {
+           bearing: 90,
+           center: [-0.12416858, 51.50779757],
+           zoom: 14.3,
+           pitch: 20
+       },
+          'karlshorst': {
+           bearing: 90,
+           center: [-0.12416858, 51.50779757],
+           zoom: 14.3,
+           pitch: 20
+       },
+          'mariendorfer': {
+           bearing: 90,
+           center: [-0.12416858, 51.50779757],
+           zoom: 14.3,
+           pitch: 20
+       },
+          'nansen': {
+           bearing: 90,
+           center: [-0.12416858, 51.50779757],
+           zoom: 14.3,
+           pitch: 20
+       },
+          'schildhorn': {
+           bearing: 90,
+           center: [-0.12416858, 51.50779757],
+           zoom: 14.3,
+           pitch: 20
+       },
+          'silberstein': {
            bearing: 90,
            center: [-0.12416858, 51.50779757],
            zoom: 14.3,

@@ -6,6 +6,8 @@
 
 #map {
     z-index:-1;
+    left: 2px;
+    top: 2px;
 	float: left;
  	width:70%;
  	height: 100%;
@@ -16,10 +18,111 @@
  	width:30%;
  	height: 100%;
 }
+#indicator_amrumer{
+    background-image: url("../indicator/amrumer.png");
+    width: 268px;
+    height: 10px;
+    float: left;
+    margin-top: 5px;
+}
+#indicator_belziger{
+    background-image: url("../indicator/belziger.png");
+    width: 268px;
+    height: 10px;
+    float: left;
+    margin-top: 10px;
+}
+#indicator_bruecken{
+    background-image: url("../indicator/bruecken.png");
+    width: 268px;
+    height: 10px;
+    float: left;
+    margin-top: 10px;
+}
+#indicator_buch{
+    background-image: url("../indicator/buch.png");
+    width: 268px;
+    height: 10px;
+    float: left;
+    margin-top: 10px;
+}
+#indicator_frankfurter{
+    background-image: url("../indicator/frankfurter.png");
+    width: 268px;
+    height: 10px;
+    float: left;
+    margin-top: 10px;
+}
+#indicator_frohnau{
+    background-image: url("../indicator/frohnau.png");
+    width: 268px;
+    height: 10px;
+    float: left;
+    margin-top: 10px;
+}
+#indicator_grunewald{
+    background-image: url("../indicator/grunewald.png");
+    width: 268px;
+    height: 10px;
+    float: left;
+    margin-top: 10px;
+}
+#indicator_hardenberg{
+    background-image: url("../indicator/hardenberg.png");
+    width: 268px;
+    height: 10px;
+    float: left;
+    margin-top: 10px;
+}
+#indicator_karlmarx{
+    background-image: url("../indicator/karlmarx.png");
+    width: 268px;
+    height: 10px;
+    float: left;
+    margin-top: 10px;
+}
+#indicator_karlshorst{
+    background-image: url("../indicator/karlshorst.png");
+    width: 268px;
+    height: 10px;
+    float: left;
+    margin-top: 10px;
+}
+#indicator_mariendorfer{
+    background-image: url("../indicator/mariendorfer.png");
+    width: 268px;
+    height: 10px;
+    float: left;
+    margin-top: 10px;
+}
+#indicator_nansen{
+    background-image: url("../indicator/nansen.png");
+    width: 268px;
+    height: 10px;
+    float: left;
+    margin-top: 10px;
+}
+#indicator_schildhorn{
+    background-image: url("../indicator/schildhorn.png");
+    width: 268px;
+    height: 10px;
+    float: left;
+    margin-top: 10px;
+}
+#indicator_silberstein{
+    background-image: url("../indicator/silberstein.png");
+    width: 268px;
+    height: 10px;
+    float: left;
+    margin-top: 10px;
+}
+#last-section{
+    height: 350px;
+}
 #legend-enlarged {
     position: fixed;
     width:75%;
-    height: 400px;
+    height: 800px;
     display: none;
     background-color: white;
     -webkit-box-shadow: 0px 0px 52px -16px rgba(0,0,0,0.75);
@@ -35,16 +138,18 @@
     width: 100%;
 }
 #comparing_button{
+  position: fixed;
+    z-index: 99;
+  padding-top:100px;
+  padding-left:20px;
     border: none;
-  -webkit-border-radius: 2;
-  -moz-border-radius: 2;
-  border-radius: 2px;
 font-family: 'Palanquin', sans-serif;
   color: #4990E2;
+  background: none;
   font-style: bold;
-  font-size: 16px;
-  background: white;
+  font-size: 18px;
   text-decoration: none;
+  border-width: 0.5;
 }
 #comparing_button:hover{
   color: #63A6F3;
