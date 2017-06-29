@@ -139,15 +139,15 @@
 }
 #comparing_button{
   position: fixed;
-    z-index: 99;
-  padding-top:100px;
-  padding-left:20px;
-    border: none;
-font-family: 'Palanquin', sans-serif;
+  z-index: 99;
+  padding-top:120px;
+  padding-left:25px;
+  border: none;
+  font-family: 'Palanquin', sans-serif;
   color: #4990E2;
-  background: none;
+  background-color: white;
   font-style: bold;
-  font-size: 18px;
+  font-size: 26px;
   text-decoration: none;
   border-width: 0.5;
 }
@@ -175,10 +175,12 @@ h1{
 	margin-left:20px;
 	margin-top: 20px;
 	margin-right: 20px;
+    background-color: white;
+    padding: 10px;
 	color: #121212;
     font-family: 'Martel';
-    font-size: 2em;
-    line-height: 1.7em;
+    font-size: 36px;
+    line-height: 40px;
 }
 h3{
             font-family: 'Palanquin', sans-serif;
