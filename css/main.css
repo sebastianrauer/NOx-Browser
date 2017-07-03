@@ -259,6 +259,11 @@ mapsection
     color: #121212;
     padding: 0px 5% 10px;
 }
+#news{
+    width: 500px;
+    height: 350px;
+    background-image: url("../img/news.png");
+}
 .main aside2 {
         background-color: white;
   font-family: 'Palanquin', sans-serif;
