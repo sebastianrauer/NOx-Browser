@@ -115,13 +115,12 @@
 
 
                     <section id='karlmarx'>
-                        <h3>Karl-Marx-Allee</h3>
+                        <h3>Karl-Marx-Straße</h3>
                         <div id="indicator_karlmarx"></div><br>
                         <p style="margin-top: 5px;font-size: 16px">Höchster Wert: 157 μg/m<sup>3</sup> am 16. September 2016</p>
-                        <p>Die Karl-Marx-Allee beginnt in der Nähe des Fernsehturms am Alexanderplatz, reicht knapp drei Kilometer bis nach Friedrichshain und macht sich mit 90 Metern breiter als die Champs-Élysées. 
-Als Stalinallee Anfang der fünfziger Jahre im sowjetischen Zuckerbäckerstil erbaut, sollte Deutschlands erste sozialistische Hauptstraße den Rest der Welt beeindrucken. Heute werden die Wohnungen von Jahr zu Jahr begehrter: für Galeristen, Maler, Musiker, Leute mit Geld, denen die Mietpreise nichts ausmachen und die es sich leisten können, in den neuen Geschäften einzukaufen, die an der Allee entstanden sind.
+                        <p>Die Karl-Marx-Straße ist eine Hauptstraße im Berliner Ortsteil Neukölln und war bis Mai 2008 Teil der Bundesstraße 179. Sie ist die Hauptgeschäftsstraße des gleichnamigen Bezirks und das wichtigste Subzentrum im Berliner Südosten. Nach Verkaufsfläche ist sie die drittgrößte Einkaufsstraße Berlins nach der Tauentzienstraße und der Schloßstraße. Die U-Bahnlinie U7 folgt der Straße in ihrem gesamten Verlauf.
 
-                        <br><a href="http://www.zeit.de/kultur/karl-marx-allee/index.html#chapter-04" target="_blank">Quelle</a></p>
+                        <br><a href="https://de.wikipedia.org/wiki/Karl-Marx-Stra%C3%9Fe_(Berlin)" target="_blank">Quelle</a></p>
                     </section>
 
                     <section id='karlshorst'>
@@ -164,13 +163,16 @@ Als Stalinallee Anfang der fünfziger Jahre im sowjetischen Zuckerbäckerstil er
                         <br><a href="http://www.deutschlandfunkkultur.de/silbersteinstrasse-in-berlin-neukoelln-dicke-luft-die.1001.de.html?dram:article_id=345143" target="_blank">Quelle</a></p>
                     </section>
                     <section id='silberstein'>
-                        <h3></h3>
                         <div id="last-section"></div>
                         <p>
                     </section>
                 </div>
             </div>
         </div>
+          <div id="sms">
+
+            <div></div>
+          </div>
     </div>
     <script>
     mapboxgl.accessToken = 'pk.eyJ1IjoicmF1ZXJzZWJhc3RpYW4iLCJhIjoiY2owOXRyemQ0MGFxYTJ3bnlidm11OGsxaiJ9.x5S9zEf7rbi9c_it9cECCw';
@@ -189,26 +191,27 @@ Als Stalinallee Anfang der fünfziger Jahre im sowjetischen Zuckerbäckerstil er
        'amrumer': {
            bearing: 27,
            center: [13.347124, 52.543933],
-           zoom: 14,
-           pitch: 45
+           zoom: 16,
+           pitch: 0
        },
        'belziger': {
            duration: 1000,
            center: [13.351990, 52.486559],
            bearing: 150,
-           zoom: 15,
+           zoom: 14,
+           speed: 0.2,
            pitch: 0
        },
        'bruecken': {
            bearing: 90,
            center: [13.417363, 52.512761],
-           zoom: 13,
+           zoom: 17,
            speed: 0.6,
-           pitch: 40
+           pitch: 20
        },
        'buch': {
            bearing: 90,
-           center: [13.479722, 52.643767],
+           center: [13.479238, 52.640822],
            zoom: 12.3
        },
        'frankfurter': {
@@ -230,15 +233,15 @@ Als Stalinallee Anfang der fünfziger Jahre im sowjetischen Zuckerbäckerstil er
            pitch: 40
        },
        'hardenberg': {
-           bearing: 90,
+           bearing: 0,
            center: [13.332862, 52.506621],
-           zoom: 14.3,
+           zoom: 15,
            pitch: 20
        },
           'karlmarx': {
-           bearing: 90,
-           center: [13.433879, 52.517739],
-           zoom: 14.3,
+           bearing: 45,
+           center: [13.431127, 52.483233],
+           zoom: 15.1,
            pitch: 20
        },
           'karlshorst': {
@@ -248,15 +251,15 @@ Als Stalinallee Anfang der fünfziger Jahre im sowjetischen Zuckerbäckerstil er
            pitch: 20
        },
           'mariendorfer': {
-           bearing: 90,
+           bearing: 180,
            center: [13.390107, 52.433794],
-           zoom: 14.3,
-           pitch: 20
+           zoom: 15,
+           pitch: 60
        },
           'nansen': {
            bearing: 90,
            center: [13.431045, 52.489888],
-           zoom: 14.3,
+           zoom: 15.5,
            pitch: 20
        },
           'schildhorn': {
@@ -269,7 +272,7 @@ Als Stalinallee Anfang der fünfziger Jahre im sowjetischen Zuckerbäckerstil er
            bearing: 90,
            center: [13.431608, 52.466396], 
            zoom: 14.3,
-           pitch: 20
+           pitch: 40
        }
     };
 
