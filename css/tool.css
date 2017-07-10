@@ -138,17 +138,14 @@
     width: 100%;
 }
 #comparing_button{
-  position: fixed;
   z-index: 99;
-  padding-top:120px;
   border: none;
   font-family: 'Palanquin', sans-serif;
   color: #4990E2;
   background-color: white;
   font-style: bold;
-  font-size: 26px;
+  font-size: 22px;
   text-decoration: none;
-  border-width: 0.5;
 }
 #comparing_button:hover{
   color: #63A6F3;
